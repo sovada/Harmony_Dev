@@ -1,0 +1,261 @@
+{
+  "lang": {
+
+    "fr": {
+      "mainNav": {
+        "home": "Accueil",
+        "pages": "Section",
+        "portfolio": "Portfolio",
+        "blog": "blog"
+      },
+
+      "header": {
+        "firstSentence": "L'harmonie du développement",
+        "secondSentence": "Nous aimons développé en harmonie",
+        "learnMore": "En savoir plus"
+      },
+
+      "hello": {
+        "greetings": "Bonjour",
+        "welcome": "Bienvenu cher Harmony-Dev"
+      },
+
+      "steps": {
+        "title": "étape par étape",
+        "subtitle": "Nous construisons votre univers"
+      },
+
+      "portfolioSection": {
+        "title": "Nos derniers travaux",
+        "subtitle": "Listés ci-dessous se trouve nos derniers travaux réalisés",
+        "more": "Voulez-vous voir plus de travaux?",
+        "subscribe": "s'abonner"
+      },
+
+      "description": {
+        "title": "design épuré",
+        "subtitle": "code propre",
+        "content": "Nous développons nos sites web avec les dernières technologies les plus fiables(angularJS, nodeJS, symfony2, wordpress, ...)."
+      },
+
+      "presentation": {
+        "I": "Je suis Jérémy, 22ans, passionné d'informatique depuis tout petit, je me met à votre disposition pour vous donner l'opportinuté de créer votre propre site web."
+      },
+
+      "blogSection": {
+        "title": "Dernières nouvelles",
+        "subtitle": "Tous nos articles sur notre blog"
+      },
+
+      "footer": {
+        "title": "démarquez-vous!",
+        "subtitle": "Harmony-Dev vous permet de faire bonne impréssion",
+        "map": "voir la carte",
+        "up": "retour en haut",
+        "info": "restez connecté",
+        "links": "Liens"
+      },
+
+      "price": {
+        "pricing": "prix",
+        "title": "Trouvez le prix qui vous convient",
+        "sign": "Faire un devis",
+        "web": {
+          "titleStatic": "Page web statique",
+          "subtitleStatic": "Choix de base",
+          "titleDynamic": "Page web dynamique",
+          "subtitleDynamic": "Meilleur solution",
+          "titleApp": "Applications",
+          "subtitleApp": "Applications web complètes",
+          "atstart": "pour commencer",
+          "features": {
+            "backend": "Page web avancée avec backend",
+            "withoutbackend": "Page web basic sans backend",
+            "analytics": "Statistiques de visites comprises",
+            "seo": "référencement",
+            "social": "réseaux sociaux",
+            "support": "assisstance disponnible à tout moment",
+            "admin": "panneaux d'administration",
+            "option": "meilleur choix",
+            "app": "application IOS"
+          }
+        }
+      },
+
+      "devis": "Je veux un site",
+      "features": "Caractéristiques"
+    },
+
+    "en": {
+      "mainNav": {
+        "home": "Home",
+        "pages": "Page",
+        "portfolio": "Portfolio",
+        "blog": "blog"
+      },
+
+      "header": {
+        "firstSentence": "The harmony of development",
+        "secondSentence": "We love dev in harmony",
+        "learnMore": "learn more"
+      },
+
+      "hello": {
+        "greetings": "We say hello",
+        "welcome": "Welcome to Harmony-Dev"
+      },
+
+      "steps": {
+        "title": "step by step",
+        "subtitle": "We built your own website"
+      },
+
+      "portfolioSection": {
+        "title": "Latest works",
+        "subtitle": "Here is our latest works",
+        "more": "Want to see more amazing works?",
+        "subscribe": "subscribe us"
+      },
+
+      "description": {
+        "title": "minimal design",
+        "subtitle": "clean code",
+        "content": "We develop websites with the latest and most reliable technologies ( angularjs , NodeJS , Symfony2 , wordpress ...)."
+      },
+
+      "presentation": {
+        "I": "I'm Jérémy, I'm 22, I'm here to give you the opportunities to build your own website."
+      },
+
+      "blogSection": {
+        "title": "Latest news",
+        "subtitle": "All news on our blog"
+      },
+
+      "footer": {
+        "title": "Get ready to stand out!",
+        "subtitle": "Harmony-Dev allows you to make a lasting impression",
+        "map": "see map",
+        "up": "scroll up",
+        "info": "keep in touch",
+        "links": "featured links"
+      },
+
+      "price": {
+        "pricing": "pricing",
+        "title": "Find the right price for you",
+        "sign": "Sign up",
+        "web": {
+          "titleStatic": "Static web page",
+          "subtitleStatic": "Entry level solution",
+          "titleDynamic": "Dynamic web page",
+          "subtitleDynamic": "Perfect business solution",
+          "titleApp": "Applications",
+          "subtitleApp": "More features",
+          "atstart": "At start",
+          "features": {
+            "backend": "Advanced web page with backend",
+            "withoutbackend": "Basic web page without backend",
+            "analytics": "Analytics avaible",
+            "seo": "SEO",
+            "social": "Social media",
+            "support": "Support avaible",
+            "admin": "Administrator panel",
+            "option": "Best options",
+            "app": "application IOS"
+          }
+        }
+      },
+
+      "devis": "I'd like a website",
+      "features": "Features"
+    },
+
+    "es": {
+      "mainNav": {
+        "home": "Inicío",
+        "pages": "Pagina",
+        "portfolio": "Portfolio",
+        "blog": "blog"
+      },
+
+      "header": {
+        "firstSentence": "La armonía pa dev",
+        "secondSentence": "Nos gusta dev en armonía",
+        "learnMore": "Leer mas"
+      },
+
+      "hello": {
+        "greetings": "Hola",
+        "welcome": "Bienvenido en Harmony-Dev"
+      },
+
+      "steps": {
+        "title": "poco a poco",
+        "subtitle": "Estamos ocupado de hacer vuestro pagina web"
+      },
+
+      "portfolioSection": {
+        "title": "Ultimas obras",
+        "subtitle": "Aquí son nuestros últimos trabajos",
+        "more": "Quieres ver mas trabajos?",
+        "subscribe": "suscribete"
+      },
+
+      "description": {
+        "title": "diseño elegante",
+        "subtitle": "código limpio",
+        "content": "Desarrollamos sitios web con las últimas y más fiables tecnologías ( angularjs , NodeJS , Symfony2 , wordpress ... )."
+
+      },
+
+      "presentation": {
+        "I": "Soy Jérémy ,tengo 22 años, estoy aquí pa darle las oportunidades pa construir su propio sitio web"
+      },
+
+      "blogSection": {
+        "title": "últimas noticias",
+        "subtitle": "Toda la actualidad en nuestro blog"
+      },
+
+      "footer": {
+        "title": "prepararse destacarse!",
+        "subtitle": "Harmony-Dev permite hacer una impresión duradera",
+        "map": "ver carta",
+        "up": "desplazarse hacia arriba",
+        "info": "mantenerse en contacto",
+        "links": "tecnologias"
+      },
+
+      "price": {
+        "pricing": "precios",
+        "title": "Encontrar el precio adecuado para usted",
+        "sign": "Contratar",
+        "web": {
+          "titleStatic": "Estática pagina web",
+          "subtitleStatic": "básico",
+          "titleDynamic": "dinámica pagina web",
+          "subtitleDynamic": "Mejor solucíon",
+          "titleApp": "Aplicación",
+          "subtitleApp": "Más características",
+          "atstart": "al principio",
+          "features": {
+            "backend": "Avanzado web page con backend",
+            "withoutbackend": "básico web page no tiene backend",
+            "analytics": "Analytics disponible",
+            "seo": "SEO",
+            "social": "Medio social",
+            "support": "Apoyo disponibles",
+            "admin": "administración",
+            "option": "mejor opcíon",
+            "app": "Aplicación IOS"
+          }
+        }
+      },
+
+      "devis": "Quiero una pagina web",
+      "features": "Características"
+    }
+
+  }
+}

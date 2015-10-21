@@ -1,0 +1,25 @@
+body {}
+
+h1 {font-size: 20px!important;}
+h2 {font-size: 18px!important;}
+h3 {font-size: 16px!important;}
+h4 {font-size: 14px!important;}
+h5 {font-size: 12px!important;}
+p {font-size: 10px!important;}
+
+.silver-dark--about-me h4{display:none!important;}
+
+article section img { display:block!important; width:100%!important;}
+.main-nav--company {display: none;}
+.white-light section img:first-child {width: 50%!important; margin-left: 25%;}
+.services img {width: 100%!important; margin: 0!important; padding: 0!important;}
+.white-light--work {display:block!important; width: 100%!important;}
+
+.align-left {text-align: left!important;}
+.align-right {text-align: left!important;}
+.align-center {text-align: center!important;}
+.margin-left {margin-left: 0!important;}
+.margin-right {margin-right: 0!important;}
+.margin-bottom {margin-bottom: 0!important;}
+.margin-top {margin-top: 0!important;}
+.container {margin: 0!important;}

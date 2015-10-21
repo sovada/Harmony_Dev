@@ -1,0 +1,14 @@
+{
+  "name": "harmony_dev",
+  "version": "1.0.0",
+  "description": "Entreprise de création de site web",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jérémy Beeckman",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.3.4"
+  }
+}

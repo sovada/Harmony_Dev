@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400italic);
+
+/* --------------------------- global ---------------------------*/
+.container {margin-left: 15%!important; margin-right: 15%!important;}
+.clear {clear: left; clear: right; clear: both;}
+video {margin: 0; padding: 0;}
+.float-right {float: right;}
+.float-left {float: left;}
+html {background: white;}
+.align-left {text-align: left!important;}
+.align-right {text-align: right!important;}
+.align-center {text-align: center!important;}
+.margin-left {margin-left: 20%!important;}
+.margin-right {margin-right: 20%!important;}
+.margin-bottom {margin-bottom: 2%!important;}
+.margin-top {margin-top: 2%!important;}
+.block {dislay: block;}
+/* -------------------------- End Container ----------------------*/
+
+
+/* -------------------------- Header ---------------------------- */
+header {display:block;  color:#757575; overflow: hidden; position: relative; margin-bottom: 3%; z-index: 10; height: 100%;} /* Height declare in main.js */
+header nav {display:block; margin-left : 1.7%; margin-right: 1.7%; text-align: right; font-family: "Montserrat", "sans-serif"; font-weight: bold; font-size: 13px; margin-top: 3%;}
+.main-nav--company {float: left; text-align: left; margin-left : 1.7%; margin-right: 1.7%; font-family: "Montserrat", "sans-serif"; font-weight: bold; margin-top: 3%;}
+.main-nav--company img{width: 20%; margin-top: -10%;}
+.main-nav--presentation {display:block; width: 100%; text-align: center;}
+.main-nav--presentation---arrow {display:block; position: absolute; bottom: 5%; text-align:center; width: 100%;}
+.main-nav--presentation---arrow a {color: #757575;}
+.main-nav--presentation---arrow a {transition: all linear 1s; -moz-transition: all linear 1s; -webkit-transition: all linear 1s;}
+.main-nav--presentation---arrow a:hover {color: #d2d0d0;}
+.main-nav--presentation p {font-family: 'Playfair Display', serif!important; font-weight: 400; font-style: italic; font-size: 24px; color: #757575!important; font-weight: bold;}
+.main-nav--presentation button {font-size: 10px; padding: 0.5%; padding-left: 1%; padding-right: 1%; background: white; color:#757575; border: solid 1px #757575;}
+.main-nav--presentation button {transition: color linear 1s, border-color linear 1s; -moz-transition: color linear 1s, border-color linear 1s; -webkit-transition: color linear 1s, border-color linear 1;}
+.main-nav--presentation button:hover {color: #d2d0d0; border-color: #d2d0d0; cursor: pointer;}
+.main-nav--presentation button {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; text-transform: uppercase;}
+.main-nav--presentation hr {width: 2.5%; margin-top: -1%; margin-bottom: 1%;}
+.main-nav--presentation h1 {font-size: 64px; text-transform: uppercase; color: #757575!important; line-height: 64px!important;}
+header nav ul li {display: inline-block;margin-left: 1%; margin-right: 1%; text-transform: uppercase;}
+header nav ul li:last-child {font-size: 15px;}
+header nav ul li a {text-decoration: none; color: #757575;}
+header nav ul li a {transition: all linear 1s; -moz-transition: all linear 1s; -webkit-transition: all linear 1s;}
+header nav ul li a:hover {color: #d2d0d0;}
+
+.video {position: absolute; top: 0px; z-index: 1;height: 100%; width: 100%;}
+/* -------------------- End Header --------------------------- */
+
+
+/* ------------------------ Articles ------------------------- */
+article {display:block!important;text-align: center!important;}
+
+.white-light section {display: block!important; text-align: center;}
+.white-light section h1 {font-size: 60px; text-transform: uppercase; color: #494949; margin-bottom: 1%; }
+.white-light section img:first-child {width: 5%;}
+.white-light section span {font-family: 'Playfair Display', serif!important; font-weight: 400; font-style: italic; font-size: 22px; color: #666666;}
+.white-light section button {margin-top: 1%; margin-bottom: 1%; font-size: 10px; padding: 0.5%; padding-left: 1%; padding-right: 1%; background: white; color:#494949; border: solid 1px #494949;}
+.white-light section button {transition: color linear 1s, border-color linear 1s; -moz-transition: color linear 1s, border-color linear 1s; -webkit-transition: color linear 1s, border-color linear 1s;}
+.white-light section button:hover {color: #9a9a9a; border-color: #9a9a9a; cursor: pointer;}
+.white-light section button {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; text-transform: uppercase;}
+.white-light section img {width: 35%;}
+.white-light section .services {margin-top: 2%;}
+
+.silver-light {background-color: #fbfbfb!important; padding-top: 1%; padding-bottom: 3%;}
+.silver-light img {width: 15%!important;}
+.silver-light .repos{margin-left: -3.7px;}
+.silver-light section h1 {font-size: 28px; font-family: "Montserrat", "sans-serif"; font-weight: bold; text-transform: uppercase; color: #494949;}
+.silver-light section p {padding-bottom: 2%; font-family: 'Playfair Display', serif!important; font-weight: 400; font-style: italic; font-size: 18px; color: #666666!important;}
+
+.silver-dark {background: #a7a7a7; padding-top: 1%; padding-bottom: 1%; min-height: 100px;}
+.silver-dark section h1 {font-size: 28px; text-transform: uppercase; margin-bottom: 2%;}
+.silver-dark section h1, .silver-dark p {color:white!important;}
+.silver-dark section .features img {width: 20%; padding-bottom: 2%;}
+
+.white-light .white-light--resizeh1 {font-size: 28px!important;}
+.white-light section p {padding-bottom: 2%; font-family: 'Playfair Display', serif!important; font-weight: 400; font-style: italic; font-size: 18px; color: #666666!important;}
+.white-light .white-light--work {display: inline-block; width: 30.20%; min-height: 300px; max-height: 300px; background-color: #f6f6f6; overflow: hidden; margin-bottom: 2%;}
+.white-light .white-light--work {border: solid #a7a7a7 2px; background-repeat: no-repeat; background-position: center; position: relative;}
+.white-light .white-light--work---hide {display: block; background-color: rgba(0, 0, 0, 0.57);position: absolute; bottom: -30px; width: 100%;}
+.white-light .white-light--work---hide {transition: bottom linear 1s; -webkit-transition: bottom linear 0.1s; -moz-transition: bottom linear 1s;}
+.white-light .white-light--work---hide h1, h2, h3, h4, h5, h6, p {color: white!important; font-family: "Montserrat", "sans-serif"; text-transform: uppercase;}
+.white-light .white-light--work---hide h3 {font-size: 16px; font-weight: bold; font-style: normal;}
+.white-light .white-light--work---hide p {font-size: 11px; font-style: normal; color:white!important;}
+.white-light .white-light--work---hide h3 a {color: white!important;}
+.white-light .white-light--work:hover .white-light--work---hide {bottom: 0px;}
+
+.silver-dark h3 {display:inline; margin-right: 10%; line-height: 100px;}
+.silver-dark section button {margin-top: 1%; margin-bottom: 1%; font-size: 10px; padding: 0.5%; padding-left: 1%; padding-right: 1%; background: white; color:#494949; border: solid 1px white;}
+.silver-dark section button:last-child {margin-top: 1%; margin-bottom: 1%; font-size: 10px; padding: 0.5%; padding-left: 1%; padding-right: 1%; background: #a7a7a7; color:white; border: solid 1px white;}
+.silver-dark section button {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; text-transform: uppercase;}
+.silver-dark section button:hover {cursor: pointer;}
+
+.white-light .white-light--dark-title img {width: 30%!important; margin-top: 2%;}
+.white-light .white-light--dark-title h3, .white-light .white-light--dark-title a {color: #494949!important; font-style: normal!important; text-decoration: none;}
+.white-light .white-light--dark-title p {padding-bottom: 0%;}
+.white-light .white-light--dark-title button {margin-bottom: 2%!important;}
+
+.silver-dark .silver-dark--about-me {float:left; max-width: 20%; margin-left: 30%; margin-top: 3.5%;}
+.silver-dark .silver-dark--about-me p {padding-bottom: 0.5%!important; font-family: 'Playfair Display', serif!important; font-weight: 400; font-style: italic; font-size: 20px; text-transform: none; margin-top: 1%;}
+.silver-dark .silver-dark--about-me p {display: inline-block;}
+.silver-dark .silver-dark--about-me p::before {content: "\" ";}
+.silver-dark .silver-dark--about-me p::after {content: " \"";}
+.silver-dark .about-img {width: 10%; margin-right: 15%;}
+
+.silver-dark-strong {background-color: #3d3d40;}
+.silver-dark-strong section {padding-top:5%; padding-bottom: 5%;}
+.silver-dark-strong section h1 {color:white!important; font-family: "Montserrat", "sans-serif"; text-transform: uppercase; font-size: 30px;}
+.silver-dark-strong section p {font-family: 'Playfair Display', serif!important; font-weight: 400; font-style: italic; font-size: 15px;}
+.silver-dark-strong section button {margin-top: 1%; margin-bottom: 1%; font-size: 10px; padding: 0.5%; padding-left: 1%; padding-right: 1%; background: #3d3d40; color:white; border: solid 1px white;}
+.silver-dark-strong section button {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; text-transform: uppercase;}
+.silver-dark-strong section button:hover {cursor: pointer;}
+
+.black-dark {background-color: #191919; padding-top: 2%; padding-bottom: 2%;}
+.black-dark .black-dark--section a {color:white; text-decoration:none;}
+/* ----------------------- End Article ----------------------- */
+
+
+/* -------------------------- Footer ------------------------- */
+footer {background-color: #1d1d1d; margin:0!important; padding-top: 2%;}
+footer h5{font-size: 14px;}
+footer i {color:white;}
+footer p {color:white; font-size: 11px;}
+footer a {color:white; text-decoration: none;}
+.footer--silver {background-color:#3c3c3c; padding-top: 2%; padding-bottom: 2%;}
+footer h1, footer h2, footer h3, footer h4, footer h5 {color:white;font-family: "Montserrat", "sans-serif"; text-transform: uppercase;}
+/* ------------------------ End Footer ----------------------- */

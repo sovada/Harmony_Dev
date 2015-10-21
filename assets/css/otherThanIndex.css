@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400italic);
+
+/* --------------------------- global ---------------------------*/
+.container {margin-left: 15%!important; margin-right: 15%!important; overflow: hidden;}
+.clear {clear: left; clear: right; clear: both;}
+video {margin: 0; padding: 0;}
+.float-right {float: right;}
+.float-left {float: left;}
+html {background: white;}
+.align-left {text-align: left!important;}
+.align-right {text-align: right!important;}
+.align-center {text-align: center!important;}
+.margin-left {margin-left: 15%!important;}
+.little-margin-left {margin-left: 8.5%!important;}
+.margin-right {margin-right: 15%!important;}
+.margin-bottom {margin-bottom: 2%!important;}
+.margin-top {margin-top: 2%!important;}
+.block {display: block;}
+.inline {display:inline-block;}
+/* -------------------------- End Container ----------------------*/
+
+
+/* -------------------------- Header ---------------------------- */
+header nav {width: 100%; height: 75px; line-height: 75px; text-align: right; font-family: "Montserrat", "sans-serif"; font-weight: bold; font-size: 13px;}
+header .pricing-title {background: #cccccc; color: white; height: 200px; line-height: 200px; font-family: "Montserrat", "sans-serif"; }
+header .pricing-title h2 {font-size: 28px; font-weight: bold; text-transform: uppercase; margin-left: 5%; float:left; margin-top: -0.01%;}
+header .pricing-title .header--ariane {float: right; margin-right: 5%;}
+header .pricing-title .header--ariane a{color: white;}
+header .main-nav--company img{width: 4%!important; float: left;}
+header nav ul li {display: inline-block;margin-left: 1%; margin-right: 1%; text-transform: uppercase;}
+header nav ul li:last-child {font-size: 15px;}
+header nav ul li a {text-decoration: none; color: #757575;}
+header nav ul li a {transition: all linear 1s; -moz-transition: all linear 1s; -webkit-transition: all linear 1s;}
+header nav ul li a:hover {color: #d2d0d0;}
+/* -------------------- End Header --------------------------- */
+
+
+/* ------------------------ Articles ------------------------- */
+.pricing {text-align: center;}
+.pricing section {background-color: #f5f5f5; width: 22.333333333%; margin-left: 0.5%; margin-right: 0.5%; display: inline-block; margin-bottom: 1%;}
+.pricing button {font-size: 10px; padding-top: 2%; padding-bottom: 2%; padding-left: 5%; padding-right: 5%; background: #aaaaaa; color:white; border: solid 1px #757575;}
+.pricing button {text-transform: uppercase; margin-bottom: 1%; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; margin-top: 5%; margin-bottom: 5%; border: none;}
+.pricing button:hover {cursor: pointer;}
+.pricing .best-option {background-color: #333333!important;}
+.pricing .best-option h3 {color: white!important;}
+.pricing .best-option p {color: #cccccc!important;}
+.pricing .best-option .price {color:white!important;}
+.pricing .best-option button {background-color:white!important; color: #333333!important;}
+.pricing section hr {color: white!important; background-color:white!important; border-top: white 1px solid;}
+.pricing section .price {color: #333333!important; font-family: "Montserrat", "sans-serif"; font-weight: bold; font-size: 30px; text-transform: uppercase;}
+.pricing .container h3 {font-family: "Montserrat", "sans-serif"; font-weight: bold; font-size: 20px; text-transform: uppercase;}
+.pricing section h3 {color: #333333!important; font-family: "Montserrat", "sans-serif"; font-weight: bold; font-size: 18px!important; text-transform: uppercase;}
+.pricing section p {color: #888888!important; font-family: "Montserrat", "sans-serif"; font-weight: bold; font-size: 11px!important; text-transform: uppercase; line-height: 15px;}
+
+.portfolio .container {margin-top: 1500%!important; margin-bottom: 5%;}
+.portfolio div section {background-color: #cccccc; width: 32%; margin-left: 0.25%; margin-right: 0.25%; margin-top: 0.5%; margin-bottom: 0.5%; height: 250px;}
+
+.pagination a {text-decoration: none; border: 1px solid lightgrey; padding: 0.5%;}
+.pagination .pagination_active {text-decoration: underline; color: black;}
+/* ----------------------- End Article ----------------------- */
+
+
+/* -------------------------- Footer ------------------------- */
+footer {background-color: #1d1d1d; margin:0!important; padding-top: 2%;}
+footer h5{font-size: 14px;}
+footer i {color:white;}
+footer p {color:white; font-size: 11px;}
+footer a {color:white; text-decoration: none;}
+.footer--silver {background-color:#3c3c3c; padding-top: 2%; padding-bottom: 2%;}
+footer h1, footer h2, footer h3, footer h4, footer h5 {color:white;font-family: "Montserrat", "sans-serif"; text-transform: uppercase;}
+/* ------------------------ End Footer ----------------------- */

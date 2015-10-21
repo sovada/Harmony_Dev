@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta Tag -->
+        <meta charset="utf-8" />
+        <!-- End Meta Tag -->
+
+        <!-- JS -->
+        <script src="js/jQuery.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+        <!-- End JS -->
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/styles.css" type="text/css" />
+        <link rel="stylesheet" media="screen and (max-width: 640px)" href="../css/smallscreen.css" type="text/css" />
+        <!-- End CSS -->
+
+        <!-- Icon -->
+        <link rel="stylesheet" href="icon/Icon-font-7/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+        <link rel="stylesheet" href="icon/font-awesome/css/font-awesome.min.css">
+        <!-- End Icon -->
+
+    </head>
+    <body id="body">
+        <header class="main-nav">
+            <span class="main-nav--company">
+                <img src="img/logoWebsiteGrey.png" alt="Logo Harmony-Dev" title="Logo Harmony-Dev" />
+            </span>
+
+            <nav>
+                <ul>
+                    <li><a href="/" title="Home"><%= translation.mainNav.home %>&nbsp;<i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="#" title="Pages"><%= translation.mainNav.pages %>&nbsp;<i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="portfolio" title="Portfolio"><%= translation.mainNav.portfolio %>&nbsp;<i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="blog" title="Blog"><%= translation.mainNav.blog %>&nbsp;<i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="#" title="Search"><i class="pe-7s-search"></i></a></li>
+                </ul>
+            </nav>
+            <br class="clear"/>
+
+            <div class="main-nav--presentation">
+                <p><%= translation.header.firstSentence %></p>
+                <h1><%= translation.header.secondSentence %></h1>
+                <hr />
+                <button type="button" title="Learn more" href="views/price.html" onclick="window.location.href='price'"><%= translation.header.learnMore %></button>
+                <span class="main-nav--presentation---arrow"><a href="#next" title="next"><i class="fa fa-angle-down fa-3x"></i></a></span>
+            </div>
+        </header>
+
+        <video id="my_video" class="video" autoplay loop>
+          <source src="media/header.mp4" type="video/mp4" />
+          <source src="media/header.webm" type="video/webm" />
+          <source src="media/header.ogg" type="video/ogg" />
+          Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
+        </video>
+
+        <article id="next" class="white-light">
+            <section>
+                <img src="img/logoWebsiteGrey.png" alt="Logo Harmony-Dev" title="Logo Harmony-Dev" />
+                <h1><%= translation.hello.greetings %></h1>
+                <span><%= translation.hello.welcome %></span>
+                <br />
+                <button type="button" title="Devi" onclick="window.location.href='price'"><%= translation.devis %></button>
+                <br />
+                <img src="img/image1.jpg" alt="Perfect Code" title="Perfect Code" />
+            </section>
+        </article>
+
+        <article class="silver-light">
+            <section>
+                <h1><%= translation.steps.title %></h1>
+                <p><%= translation.steps.subtitle %></p>
+
+                <div class="services">
+                    <img src="img/image2.jpg" alt="Brainstorming" title="Brainstorming" />
+                    <img src="img/image3.jpg" alt="Inspiration" title="Inspiration" />
+                    <img src="img/image4.jpg" alt="Responsive design" title="Responsiv design" />
+                    <img src="img/image5.jpg" alt="Develop solutions" title="Develop solutions" />
+                    <br />
+                    <img src="img/image6.jpg" alt="Prototype" title="Prototype" class="repos"/>
+                    <img src="img/image7.jpg" alt="Test" title="Test" />
+                    <img src="img/image8.jpg" alt="Mobile app" title="Mobile app" />
+                    <img src="img/image9.jpg" alt="Break" title="Break" />
+                </div>
+            </section>
+        </article>
+
+        <article class="silver-dark">
+            <section>
+                <h1><%= translation.features %></h1>
+
+                <div class="features">
+                    <img src="img/image13.jpg" alt="App development" title="App development" />
+                    <img src="img/image11.jpg" alt="Search optimization" title="Search optimization" />
+                    <img src="img/image12.jpg" alt="Social network" title="Social network" />
+                    <br />
+                </div>
+            </section>
+        </article>
+
+        <article class="white-light">
+            <section>
+                <h1 class="white-light--resizeh1"><%= translation.portfolioSection.title %></h1>
+                <p><%= translation.portfolioSection.subtitle %></p>
+
+
+                <div class= "white-light--work" style="background-image: url('http://lorempicsum.com/futurama/600/300/2');">
+                    <span class="white-light--work---hide">
+                        <h3><a href="#">Portfolio Title</a></h3>
+                        <p>Portfolio description</p>
+                    </span>
+                </div>
+
+                <div class= "white-light--work"  style="background-image: url('http://lorempicsum.com/futurama/600/300/2');">
+                    <span class="white-light--work---hide">
+                        <h3><a href="#">Portfolio Title</a></h3>
+                        <p>Portfolio description</p>
+                    </span>
+                </div>
+            </section>
+        </article>
+
+        <article class="silver-dark">
+            <section>
+                <h3><i class="pe-7s-portfolio"></i> <%= translation.portfolioSection.more %></h3> <button type="button" title="Portfolio" onclick="window.location.href='portfolio'">Portfolio</button> <button type="button" title="Newsletter"><%= translation.portfolioSection.subscribe%></button>
+            </section>
+        </article>
+
+        <article class="white-light">
+            <section class="white-light--dark-title">
+                <img src="img/image14.png" alt="Macintosh" title="Macintosh" />
+                <span>
+                    <h3><%= translation.description.title %>.<br /><%= translation.description.subtitle %>.</h3>
+                    <p><%= translation.description.content %></p>
+                    <button type="button" title="Devi" onclick="window.location.href='price'"><%= translation.devis %></button>
+                </span>
+            </section>
+        </article>
+
+        <article class="silver-dark">
+            <section class="silver-dark--about-me">
+                <p><%= translation.presentation.I %></p>
+                <h4>Jérémy Beeckman</h4>
+            </section>
+            <img src="img/image15.png" alt="" title="" class="about-img" />
+        </article>
+
+        <article class="white-light">
+            <section class="white-light--dark-title">
+                <h3 class="align-left margin-left float-left"><%= translation.blogSection.title %></h3>
+                <h4 class="align-right margin-right float-right"><a href="/blog"><%= translation.blogSection.subtitle %> <i class="fa fa-long-arrow-right"></i></a></h4>
+                <br class="clear" />
+                <div class= "white-light--work" style="background-image: url('http://lorempicsum.com/futurama/600/300/2');">
+                    <span class="white-light--work---hide">
+                        <h3><a href="#">Blog Title</a></h3>
+                        <p>Blog description</p>
+                    </span>
+                </div>
+
+                <div class= "white-light--work" style="background-image: url('http://lorempicsum.com/futurama/600/300/2');">
+                    <span class="white-light--work---hide">
+                        <h3><a href="#">Blog Title</a></h3>
+                        <p>Blog description</p>
+                    </span>
+                </div>
+
+            </section>
+        </article>
+
+        <article class="silver-dark-strong">
+            <section class="align-center">
+                <h1><%= translation.footer.title %></h1>
+                <p><%= translation.footer.subtitle %></p>
+                <button type="button" title="Portfolio" onclick="window.location.href='price'"><%= translation.devis %></button>
+            </section>
+        </article>
+
+        <article class="black-dark align-center">
+            <section class="black-dark--section">
+                <p><a href="#"><i class="pe-7s-map-marker"></i> <%= translation.footer.map %></a> &nbsp; <a href="#body"><i class="pe-7s-up-arrow"></i> <%= translation.footer.up %></a></p>
+            </section>
+        </article>
+
+        <footer>
+            <section class="float-left margin-left">
+                <h5><%= translation.footer.info %></h5>
+                <p><i class="pe-7s-mail"></i> harmony.dev.info@gmail.com</p>
+                <p><i class="pe-7s-call"></i> 0 (032) 479/ 57.77.86 </p>
+                <p><i class="pe-7s-map-marker"></i> Libramont-Chevigny, Belgium</p>
+                <p><i class="pe-7s-mail"></i> harmony.dev.info@gmail.com</p>
+            </section>
+
+            <section class="float-right margin-right align-right">
+                <h5><%= translation.footer.links %></h5>
+                <p><a href="#">Node.JS</a></p>
+                <p><a href="#">Angular.JS</a></p>
+                <p><a href="#">Ruby On Rails</a></p>
+                <p><a href="#">Php</a></p>
+            </section>
+
+            <br class="clear" />
+
+            <section class="footer--silver margin-top">
+                <div class="block margin-left float-left">
+                    <p><a href="https://www.facebook.com/harmony.dev" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a> <a href="https://twitter.com/Harmony_Dev" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a></p>
+                </div>
+
+                <div class="block margin-right float-right align-right">
+                    <p>&copy; Harmony-Dev 2015.</p>
+                    <p>Made by <a href="https://www.facebook.com/Sovadaa" target="_blank">Jérémy Beeckman</a></p>
+                </div>
+
+                <br class="clear" />
+            </section>
+
+        </footer>
+
+    </body>
+</html>
