@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "Jérémy Beeckman",
   "license": "ISC",
   "dependencies": {
@@ -15,5 +19,8 @@
   "repository": {
   "type": "git",
   "url": "git://github.com/sovada/Harmony_Dev.git"
+  },
+  "engines": {
+    "node": "4.1.1"
   }
 }
