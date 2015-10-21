@@ -1,7 +1,7 @@
 var express         = require("express"),
     fs              = require("fs"),
     app             = express(),
-    port            = process.env.port || 9000,
+    port            = process.env.PORT || 9000,
     env             = "localhost://",
     translationFile = JSON.parse(fs.readFileSync(__dirname + "/config/lang.json")),
     translation     = translationFile.lang,
