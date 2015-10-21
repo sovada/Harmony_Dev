@@ -14,12 +14,12 @@
   "author": "Jérémy Beeckman",
   "license": "ISC",
   "dependencies": {
-    "express": "4.2.x",
-    "ejs": "^2.3.4"
+    "ejs": "^2.3.4",
+    "express": "^4.2.0"
   },
   "repository": {
-  "type": "git",
-  "url": "git://github.com/sovada/Harmony_Dev.git"
+    "type": "git",
+    "url": "git://github.com/sovada/Harmony_Dev.git"
   },
   "engines": {
     "node": "4.1.1"
