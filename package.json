@@ -18,8 +18,13 @@
     "express": "^4.2.0"
   },
   "repository": {
+<<<<<<< HEAD
     "type": "git",
     "url": "git://github.com/sovada/Harmony_Dev.git"
+=======
+  "type": "git",
+  "url": "git://github.com/sovada/Harmony_Dev.git"
+>>>>>>> bf1c359cf86c893209b0f6c566dbb784b3b87f05
   },
   "engines": {
     "node": "4.1.1"
