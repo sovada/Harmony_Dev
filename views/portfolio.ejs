@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="icon/Icon-font-7/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
         <link rel="stylesheet" href="icon/font-awesome/css/font-awesome.min.css">
         <!-- End Icon -->
-
+        <title>Portfolio Harmony-Dev</title>
     </head>
     <body id="body">
         <header>
@@ -30,10 +30,10 @@
 
             <nav>
                 <ul>
-                    <li><a href="/" title="Home">Home&nbsp;<i class="fa fa-angle-down"></i></a></li>
-                    <li><a href="#" title="Pages">Pages&nbsp;<i class="fa fa-angle-down"></i></a></li>
-                    <li><a href="/portfolio" title="Portfolio">Portfolio&nbsp;<i class="fa fa-angle-down"></i></a></li>
-                    <li><a href="/blog" title="Blog">Blog&nbsp;<i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="/" title="Home"><%= translation.mainNav.home %>&nbsp;<i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="#" title="Pages"><%= translation.mainNav.pages %>&nbsp;<i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="/portfolio" title="Portfolio"><%= translation.mainNav.portfolio %>&nbsp;<i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="/blog" title="Blog"><%= translation.mainNav.blog %>&nbsp;<i class="fa fa-angle-down"></i></a></li>
                     <li><a href="#" title="Search"><i class="pe-7s-search"></i></a></li>
                 </ul>
             </nav>
@@ -41,7 +41,7 @@
 
             <div class="pricing-title">
                 <h2>Portfolio</h2>
-                <span class="header--ariane"><a href="/">Home</a> > Portfolio</span>
+                <span class="header--ariane"><a href="/"><%= translation.mainNav.home %></a> > <%= translation.mainNav.portfolio %></span>
             </div>
         </header>
 
@@ -56,21 +56,21 @@
 
                 <div class="inline" style="background-image: url('http://lorempicsum.com/futurama/600/300/2')">
                     <span class="hide">
-                        <h3><a href="#">Portfolio Title</a></h3>
+                        <h3><a href="/portfolio/2">Portfolio Title</a></h3>
                         <p>Portfolio description</p>
                     </span>
                 </div>
 
                 <div class="inline" style="background-image: url('http://lorempicsum.com/futurama/600/300/2')">
                     <span class="hide">
-                        <h3><a href="#">Portfolio Title</a></h3>
+                        <h3><a href="/portfolio/3">Portfolio Title</a></h3>
                         <p>Portfolio description</p>
                     </span>
                 </div>
 
                 <div class="inline" style="background-image: url('http://lorempicsum.com/futurama/600/300/2')">
                     <span class="hide">
-                        <h3><a href="#">Portfolio Title</a></h3>
+                        <h3><a href="/portfolio/4">Portfolio Title</a></h3>
                         <p>Portfolio description</p>
                     </span>
                 </div>
@@ -81,7 +81,7 @@
 
         <footer>
             <section class="float-left margin-left ">
-                <h5>Keep in touch</h5>
+                <h5><%= translation.footer.info %></h5>
                 <p><i class="pe-7s-mail"></i> harmony.dev.info@gmail.com</p>
                 <p><i class="pe-7s-call"></i> 0 (032) 479/ 57.77.86 </p>
                 <p><i class="pe-7s-map-marker"></i> Libramont-Chevigny, Belgium</p>
@@ -89,7 +89,7 @@
             </section>
 
             <section class="float-right margin-right align-right">
-                <h5>Featured links</h5>
+                <h5><%= translation.footer.links %></h5>
                 <p><a href="#">Node.JS</a></p>
                 <p><a href="#">Angular.JS</a></p>
                 <p><a href="#">Ruby On Rails</a></p>

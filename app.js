@@ -42,7 +42,17 @@ app.get("/price", function (req, res) {
 });
 
 app.get("/portfolio", function (req, res) {
-    res.render("portfolio");
+    currentLanguage = req.headers["accept-language"][0] + req.headers["accept-language"][1];
+
+    if (currentLanguage === "en") {
+        res.render("portfolio", {"translation": translation.en});
+    } else if (currentLanguage === "fr") {
+        res.render("portfolio", {"translation": translation.fr});
+    } else if (currentLanguage === "es") {
+        res.render("portfolio", {"translation": translation.es});
+    } else {
+        res.render("portfolio", {"translation": translation.en});
+    }
 });
 
 app.get("/blog", function (req, res) {
