@@ -53,16 +53,22 @@ header nav ul li a:hover {color: #d2d0d0;}
 .pricing section h3 {color: #333333!important; font-family: "Montserrat", "sans-serif"; font-weight: bold; font-size: 18px!important; text-transform: uppercase;}
 .pricing section p {color: #888888!important; font-family: "Montserrat", "sans-serif"; font-weight: bold; font-size: 11px!important; text-transform: uppercase; line-height: 15px;}
 
-.portfolio .container {margin-top: 1500%!important; margin-bottom: 5%;}
-.portfolio div section {background-color: #cccccc; width: 32%; margin-left: 0.25%; margin-right: 0.25%; margin-top: 0.5%; margin-bottom: 0.5%; height: 250px;}
-
 .pagination a {text-decoration: none; border: 1px solid lightgrey; padding: 0.5%;}
 .pagination .pagination_active {text-decoration: underline; color: black;}
 /* ----------------------- End Pricing ----------------------- */
 
 
 /* ------------------------ Portfolio ------------------------- */
+.portfolio .container {margin-top: 1500%!important; margin-bottom: 5%;}
+.portfolio .container div {background-color: #cccccc; width: 32%; margin-left: 0.25%; margin-right: 0.25%; margin-top: 0.5%; margin-bottom: 0.5%; height: 250px; position: relative; overflow: hidden;}
 
+.portfolio .container .hide {display: block; background-color: rgba(0, 0, 0, 0.57);position: absolute; bottom: -69px; width: 100%; padding-left: 2%; padding-bottom: 2%; padding-right: 2%;}
+.portfolio .container .hide {transition: bottom linear 1s; -webkit-transition: bottom linear 0.1s; -moz-transition: bottom linear 1s;}
+.portfolio .container .hide h1, h2, h3, h4, h5, h6, p {color: white!important; font-family: "Montserrat", "sans-serif"; text-transform: uppercase;}
+.portfolio .container .hide h3 {font-size: 16px; font-weight: bold; font-style: normal;}
+.portfolio .container .hide p {font-size: 11px; font-style: normal; color:white!important;}
+.portfolio .container .hide h3 a {color: white!important;}
+.portfolio .container div:hover .hide {bottom: 0px;}
 /* ----------------------- End Portfolio ----------------------- */
 
 
