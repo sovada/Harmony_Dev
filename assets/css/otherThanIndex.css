@@ -71,12 +71,11 @@ header nav ul li a:hover {color: #d2d0d0;}
 .portfolio .container div:hover .hide {bottom: 0px;}
 
 .portfolio-single {}
-.portfolio-single .container .slider {background-color: silver; margin-top: 2.5%; margin-bottom: 2.5%;}
-.portfolio-single .container .slider img {width: 100%;}
 
-.banner { position: relative; overflow: auto; }
-.banner li { list-style: none; }
-.banner ul li { float: left; }
+.banner {position: relative; overflow: auto; background-color:white; margin-top: 2.5%; margin-bottom: 2.5%; max-width: 100%; min-width: 100%; min-height: 730px;}
+.banner li {list-style: none;}
+.banner ul li {float: left;}
+.banner ul li img {width: 100%;}
 /* ----------------------- End Portfolio ----------------------- */
 
 
