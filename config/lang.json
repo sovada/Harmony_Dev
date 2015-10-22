@@ -82,6 +82,11 @@
         }
       },
 
+      "portfolio": {
+          "title": "Travaille réalisé",
+          "viewProject": "Voir le projet"
+      },
+
       "devis": "Je veux un site",
       "features": "Caractéristiques"
     },
@@ -165,6 +170,11 @@
             "app": "application IOS"
           }
         }
+      },
+
+      "portfolio": {
+          "title": "Single work",
+          "viewProject": "View project"
       },
 
       "devis": "I'd like a website",
@@ -251,6 +261,11 @@
             "app": "Aplicación IOS"
           }
         }
+      },
+
+      "portfolio": {
+          "title": "trabajo realizado",
+          "viewProject": "ver"
       },
 
       "devis": "Quiero una pagina web",

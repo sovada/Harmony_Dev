@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400italic);
 
 /* --------------------------- global ---------------------------*/
-.container {margin-left: 15%!important; margin-right: 15%!important; overflow: hidden;}
+.container {margin-left: 15%!important; margin-right: 15%!important; }
 .clear {clear: left; clear: right; clear: both;}
 video {margin: 0; padding: 0;}
 .float-right {float: right;}
@@ -69,6 +69,14 @@ header nav ul li a:hover {color: #d2d0d0;}
 .portfolio .container .hide p {font-size: 11px; font-style: normal; color:white!important;}
 .portfolio .container .hide h3 a {color: white!important;}
 .portfolio .container div:hover .hide {bottom: 0px;}
+
+.portfolio-single {}
+.portfolio-single .container .slider {background-color: silver; margin-top: 2.5%; margin-bottom: 2.5%;}
+.portfolio-single .container .slider img {width: 100%;}
+
+.banner { position: relative; overflow: auto; }
+.banner li { list-style: none; }
+.banner ul li { float: left; }
 /* ----------------------- End Portfolio ----------------------- */
 
 
