@@ -41,7 +41,7 @@
 
     <div class="pricing-title" style="background: url('/img/blog.jpg'); background-repeat: no-repeat; background-position: center;">
         <h2 style="color: black!important;"><%= translation.mainNav.blog %></h2>
-        <span class="header--ariane"><a href="/"><%= translation.mainNav.home %></a> > <%= translation.mainNav.blog %></span>
+        <span class="header--ariane"><a href="/"><%= translation.mainNav.home %></a> > <a href="/blog"><%= translation.mainNav.blog %></a> > <a href="#">blog category</a> > blog title </span>
     </div>
 </header>
 
@@ -79,25 +79,10 @@
 
         <article class="post">
             <img src="/img/image12.jpg" alt="" />
-            <h1>Post title</h1>
+            <h1>Post title <%= id %></h1>
             <p>Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui
             Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui
             ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui </p>
-            <span class="more"><a href="blog/1"><i class="pe-7s-angle-right-circle"></i> <%= translation.blog.readMore %></a></span>
-            <div class="link">
-                <span><i class="pe-7s-user"></i> Author</span>
-                <span><i class="pe-7s-date"></i> Date</span>
-                <span><i class="pe-7s-folder"></i> Category</span>
-            </div>
-        </article>
-
-        <article class="post">
-            <img src="/img/image12.jpg" alt="" />
-            <h1>Post title</h1>
-            <p>Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui
-            Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui
-            ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui </p>
-            <span class="more"><a href="blog/2"><i class="pe-7s-angle-right-circle"></i> <%= translation.blog.readMore %></a></span>
             <div class="link">
                 <span><i class="pe-7s-user"></i> Author</span>
                 <span><i class="pe-7s-date"></i> Date</span>
@@ -106,8 +91,30 @@
         </article>
 
         <br class="clear" />
+
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+             */
+            /*
+            var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() {  // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+
+                s.src = '//harmonydev.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
     </div>
-    <span class="pagination block margin-left margin-bottom margin-top"><a href="#"><<</a>&nbsp;&nbsp;<a href="#"><</a>&nbsp;&nbsp;<a href="#" class="pagination_active">1</a>&nbsp;<a href="#">2</a>&nbsp;<a href="#">3</a>&nbsp;<a href="#">4</a>&nbsp;&nbsp;<a href="#">></a>&nbsp;&nbsp;<a href="#">>></a></span>
 </section>
 
 <footer>
