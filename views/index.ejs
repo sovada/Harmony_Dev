@@ -124,7 +124,14 @@
 
         <article class="silver-dark">
             <section>
-                <h3><i class="pe-7s-portfolio"></i> <%= translation.portfolioSection.more %></h3> <button type="button" title="Portfolio" onclick="window.location.href='portfolio'">Portfolio</button> <button type="button" title="Newsletter"><%= translation.portfolioSection.subscribe%></button>
+                <h3><i class="pe-7s-portfolio"></i> <%= translation.portfolioSection.more %></h3> <button type="button" title="Portfolio" onclick="window.location.href='portfolio'">Portfolio</button> <button type="button" title="Newsletter" id="getEmail"><%= translation.portfolioSection.subscribe%></button>
+
+                <form name="subscribe" id="subscribe" class="subscribe">
+                    <input type="email" class="email" placeholder="e-mail" />
+                    <br />
+                    <input type="button" value="<%= translation.submit %>" class="email--submit" id="emailClicked"/>
+                </form>
+                <span id="thanks"><h2><%= translation.thanks %>!</h2></span>
             </section>
         </article>
 
@@ -179,7 +186,7 @@
 
         <article class="black-dark align-center">
             <section class="black-dark--section">
-                <p><a href="#footer" id="clicked"><i class="pe-7s-map-marker"></i> <%= translation.footer.map %></a> <a href="#blog" id="notClicked"><i class="pe-7s-map-marker"></i> <%= translation.footer.closeMap %></a> &nbsp; <a href="#body"><i class="pe-7s-up-arrow"></i> <%= translation.footer.up %></a></p>
+                <p><a href="#footer" id="clicked"><i class="pe-7s-map-marker"></i> <%= translation.footer.map %></a> <a href="#blog" id="notClicked"><i class="pe-7s-close"></i> <%= translation.footer.closeMap %></a> &nbsp; <a href="#body"><i class="pe-7s-up-arrow"></i> <%= translation.footer.up %></a></p>
 
                 <div class="google-map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2565.5187041078707!2d5.382971915960375!3d49.98288392882476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c02ec8672c79ff%3A0x9b9feb4bba1c3ef4!2sRue+de+Lhommal%2C+6800+Libramont-Chevigny!5e0!3m2!1sfr!2sbe!4v1445861196951" id="frameGoogle" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>

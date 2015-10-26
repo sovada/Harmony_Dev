@@ -1,4 +1,4 @@
-var headerHeight = $(window).height();
+;var headerHeight = $(window).height();
 var headerPresentation = (( $(window).height() ) / 2) - 100;
 var headerArrow = $(window).height() - 100;
 

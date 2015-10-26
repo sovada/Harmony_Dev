@@ -72,6 +72,10 @@ article {display:block!important;text-align: center!important;}
 .silver-dark section h1 {font-size: 28px; text-transform: uppercase; margin-bottom: 2%;}
 .silver-dark section h1, .silver-dark p {color:white!important;}
 .silver-dark section .features img {width: 20%; padding-bottom: 2%;}
+.silver-dark form .email {border: solid 2px white; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; width: 35%; padding: 0.5%; font-size: 18px;}
+.silver-dark form .email {font-family: "Montserrat", "sans-serif"; color: #666666; background-color: white;}
+.silver-dark form .email--submit {width: 10%; font-size: 18px; margin-top: 1%; font-family: "Montserrat", "sans-serif"; color: #666666; text-transform: uppercase;}
+.silver-dark form .email--submit:hover {cursor: pointer;}
 
 .white-light .white-light--resizeh1 {font-size: 28px!important;}
 .white-light section p {padding-bottom: 2%; font-family: 'Playfair Display', serif!important; font-weight: 400; font-style: italic; font-size: 18px; color: #666666!important;}

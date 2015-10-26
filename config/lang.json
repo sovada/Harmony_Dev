@@ -96,7 +96,9 @@
       },
 
       "devis": "Je veux un site",
-      "features": "Caractéristiques"
+      "features": "Caractéristiques",
+      "submit": "Envoyer",
+      "thanks": "Merci"
     },
 
     "en": {
@@ -194,7 +196,9 @@
       },
 
       "devis": "I'd like a website",
-      "features": "Features"
+      "features": "Features",
+      "submit": "Submit",
+      "thanks": "Thanks"
     },
 
     "es": {
@@ -293,7 +297,9 @@
       },
 
       "devis": "Quiero una pagina web",
-      "features": "Características"
+      "features": "Características",
+      "submit": "Enviar",
+      "thanks": "Gracias"
     }
 
   }
