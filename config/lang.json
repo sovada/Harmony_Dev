@@ -51,6 +51,7 @@
         "title": "démarquez-vous!",
         "subtitle": "Harmony-Dev vous permet de faire bonne impréssion",
         "map": "voir la carte",
+        "closeMap": "fermer la carte",
         "up": "retour en haut",
         "info": "restez connecté",
         "links": "Liens"
@@ -148,6 +149,7 @@
         "title": "Get ready to stand out!",
         "subtitle": "Harmony-Dev allows you to make a lasting impression",
         "map": "see map",
+        "closeMap": "close map",
         "up": "scroll up",
         "info": "keep in touch",
         "links": "featured links"
@@ -245,7 +247,8 @@
       "footer": {
         "title": "prepararse destacarse!",
         "subtitle": "Harmony-Dev permite hacer una impresión duradera",
-        "map": "ver carta",
+        "map": "ver mapa",
+        "closeMap": "cerrar mapa",
         "up": "desplazarse hacia arriba",
         "info": "mantenerse en contacto",
         "links": "tecnologias"

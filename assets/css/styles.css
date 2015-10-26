@@ -16,6 +16,8 @@ html {background: white;}
 .margin-bottom {margin-bottom: 2%!important;}
 .margin-top {margin-top: 2%!important;}
 .block {dislay: block;}
+.google-map iframe {width: 100%; margin-top: 2%;}
+#clicked:hover {cursor: pointer;}
 /* -------------------------- End Container ----------------------*/
 
 
