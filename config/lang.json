@@ -87,6 +87,13 @@
           "viewProject": "Voir le projet"
       },
 
+      "blog": {
+          "recent": "Post récents",
+          "category": "Catégorie",
+          "tag": "Nuage de tag",
+          "readMore": "Lire la suite"
+      },
+
       "devis": "Je veux un site",
       "features": "Caractéristiques"
     },
@@ -175,6 +182,13 @@
       "portfolio": {
           "title": "Single work",
           "viewProject": "View project"
+      },
+
+      "blog": {
+          "recent": "Recent posts",
+          "category": "Category",
+          "tag": "Popular tag",
+          "readMore": "Read more"
       },
 
       "devis": "I'd like a website",
@@ -266,6 +280,13 @@
       "portfolio": {
           "title": "trabajo realizado",
           "viewProject": "ver"
+      },
+
+      "blog": {
+          "recent": "Populares",
+          "category": "Categoría",
+          "tag": "Tag populares",
+          "readMore": "Leer mas"
       },
 
       "devis": "Quiero una pagina web",
