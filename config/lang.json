@@ -6,7 +6,10 @@
         "home": "Accueil",
         "pages": "Section",
         "portfolio": "Portfolio",
-        "blog": "blog"
+        "blog": "blog",
+        "contact": "contact",
+        "aboutUs": "à propos de nous",
+        "pricing": "prix"
       },
 
       "header": {
@@ -106,7 +109,10 @@
         "home": "Home",
         "pages": "Page",
         "portfolio": "Portfolio",
-        "blog": "blog"
+        "blog": "blog",
+        "contact": "contact",
+        "aboutUs": "about us",
+        "pricing": "pricing"
       },
 
       "header": {
@@ -206,7 +212,10 @@
         "home": "Inicío",
         "pages": "Pagina",
         "portfolio": "Portfolio",
-        "blog": "blog"
+        "blog": "blog",
+        "contact": "contacto",
+        "aboutUs": "acerca de nosotros",
+        "pricing": "precio"
       },
 
       "header": {
