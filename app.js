@@ -73,7 +73,17 @@ app.get("/portfolio/:portfolioID", function (req, res, next) {
 });
 
 app.get("/blog", function (req, res) {
-    res.render("blog");
+    currentLanguage = req.headers["accept-language"][0] + req.headers["accept-language"][1];
+
+    if (currentLanguage === "en") {
+        res.render("blog/index", {"translation": translation.en});
+    } else if (currentLanguage === "fr") {
+        res.render("blog/index", {"translation": translation.fr});
+    } else if (currentLanguage === "es") {
+        res.render("blog/index", {"translation": translation.es});
+    } else {
+        res.render("blog/index", {"translation": translation.en});
+    }
 })
 
 app.listen(port);

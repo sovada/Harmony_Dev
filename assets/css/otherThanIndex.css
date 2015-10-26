@@ -54,8 +54,9 @@ header nav ul li a:hover {color: #d2d0d0;}
 .pricing section h3 {color: #333333!important; font-family: "Montserrat", "sans-serif"; font-weight: bold; font-size: 18px!important; text-transform: uppercase;}
 .pricing section p {color: #888888!important; font-family: "Montserrat", "sans-serif"; font-weight: bold; font-size: 11px!important; text-transform: uppercase; line-height: 15px;}
 
-.pagination a {text-decoration: none; border: 1px solid lightgrey; padding: 0.5%;}
-.pagination .pagination_active {text-decoration: underline; color: black;}
+.pagination a {text-decoration: none; border: 2px solid #838383; padding: 1%; font-family: "Montserrat", "sans-serif"; color: #636363;}
+.pagination a {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+.pagination .pagination_active {text-decoration: underline; color: white; background-color: #333333; border: solid 2px #333333; text-decoration: none!important;}
 /* ----------------------- End Pricing ----------------------- */
 
 
@@ -83,6 +84,29 @@ header nav ul li a:hover {color: #d2d0d0;}
 .banner ul li {float: left;}
 .banner ul li img {width: 100%;}
 /* ----------------------- End Portfolio ----------------------- */
+
+
+/* ------------------------ Blog ------------------------- */
+.blog a {text-decoration: none!important; color: #636363;}
+.blog .container .right-side h1, .blog .container .right-side h2, .blog .container .right-side h3, .blog .container .right-side h4, .blog .container .right-side h5 {color: #333333!important; font-family: "Montserrat", "sans-serif"; font-weight: bold; font-size: 18px!important; text-transform: uppercase;}
+.blog .container .post h1, .blog .container .post h2, .blog .container .post h3, .blog .container .post h4, .blog .container .post h5 {color: #333333!important; font-family: "Montserrat", "sans-serif"; font-weight: bold; font-size: 18px!important; text-transform: uppercase;}
+.blog .container .post p {color:#b2b2b2!important;}
+.blog {margin-top: 2.5%; margin-bottom: 2.5%;}
+.blog .container .right-side {float:right;}
+.blog .container .post img {max-width: 70%}
+.blog .container .post {max-width: 70%; margin-top: 5%;}
+.blog .container .post .more {display:block; text-align: right; color:#b2b2b2!important; text-transform: uppercase; font-family: "Montserrat", "sans-serif";}
+.blog .container .post .link{background-color: #f5f5f5; margin-top: 2%; margin-bottom: 2%;}
+.blog .container .post .link span {display: inline-block; padding: 1.5%; margin-left: 1%; margin-right: 1%; text-transform: uppercase; font-family: "Montserrat", "sans-serif"; color: #636363;}
+.blog .container .right-side {max-width: 25%;}
+.blog .container .right-side .recent li {background-color: #f5f5f5; color: #333333!important; text-transform: uppercase; padding: 5%; max-width: 100%; margin-top: 2.5%; margin-bottom: 2.5%;}
+.blog .container .right-side .recent li:last-child {margin-bottom: 10%;}
+.blog .container .right-side .category li{color: #333333!important; text-transform: uppercase; max-width: 100%; margin-top: 0.5%; margin-bottom: 0.5%;}
+.blog .container .right-side .category li .how-many {display: block; text-align: right;}
+.blog .container .right-side .cloud span {display: inline-block; padding: 2%; border: 1px solid #efefef; margin-top: 2%;}
+.blog .container .right-side .cloud span a {color: #bfbfbf!important; text-transform: uppercase;}
+.blog .container .right-side .cloud span {-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+/* ---------------------- End Blog ----------------------- */
 
 
 /* -------------------------- Footer ------------------------- */
