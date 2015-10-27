@@ -84,33 +84,19 @@
 
         </div>
 
-        <article class="post">
-            <img src="/img/image12.jpg" alt="" />
-            <h1>Post title</h1>
-            <p>Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui
-            Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui
-            ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui </p>
-            <span class="more"><a href="blog/1"><i class="pe-7s-angle-right-circle"></i> <%= translation.blog.readMore %></a></span>
-            <div class="link">
-                <span><i class="pe-7s-user"></i> Author</span>
-                <span><i class="pe-7s-date"></i> Date</span>
-                <span><i class="pe-7s-folder"></i> Category</span>
-            </div>
-        </article>
-
-        <article class="post">
-            <img src="/img/image12.jpg" alt="" />
-            <h1>Post title</h1>
-            <p>Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui
-            Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui
-            ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui </p>
-            <span class="more"><a href="blog/2"><i class="pe-7s-angle-right-circle"></i> <%= translation.blog.readMore %></a></span>
-            <div class="link">
-                <span><i class="pe-7s-user"></i> Author</span>
-                <span><i class="pe-7s-date"></i> Date</span>
-                <span><i class="pe-7s-folder"></i> Category</span>
-            </div>
-        </article>
+        <% datas.forEach(function(data) { %>
+            <article class="post">
+                <img src="<%= data.img %>" alt="<%= data.title %>" title="<%= data.title %>"/>
+                <h1><%= data.title %></h1>
+                <p><%= data.content %></p>
+                <span class="more"><a href="blog/<%= data._id %>"><i class="pe-7s-angle-right-circle"></i> <%= translation.blog.readMore %></a></span>
+                <div class="link">
+                    <span><i class="pe-7s-user"></i> <%= data.author %></span>
+                    <span><i class="pe-7s-date"></i> <%= data.date %></span>
+                    <span><i class="pe-7s-folder"></i> <%= data.category %></span>
+                </div>
+            </article>
+        <% }); %>
 
         <br class="clear" />
     </div>

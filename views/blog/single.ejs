@@ -85,15 +85,13 @@
         </div>
 
         <article class="post">
-            <img src="/img/image12.jpg" alt="" />
-            <h1>Post title <%= id %></h1>
-            <p>Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui
-            Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui
-            ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui Lorem ipsum sin dolor amet et oui </p>
+            <img src="<%= data.img %>" alt="<%= data.title %>" title="<%= data.title %>"/>
+            <h1><%= data.title %></h1>
+            <p><%= data.content %></p>
             <div class="link">
-                <span><i class="pe-7s-user"></i> Author</span>
-                <span><i class="pe-7s-date"></i> Date</span>
-                <span><i class="pe-7s-folder"></i> Category</span>
+                <span><i class="pe-7s-user"></i> <%= data.author %></span>
+                <span><i class="pe-7s-date"></i> <%= data.date %></span>
+                <span><i class="pe-7s-folder"></i> <%= data.category %></span>
             </div>
         </article>
 
@@ -101,16 +99,6 @@
 
         <div id="disqus_thread"></div>
         <script>
-            /**
-             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-             */
-            /*
-            var disqus_config = function () {
-                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            */
             (function() {  // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
 
