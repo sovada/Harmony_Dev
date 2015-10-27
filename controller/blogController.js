@@ -1,20 +1,7 @@
-module.exports = function (app, translation, mongoose) {
+module.exports = function (app, translation, blog) {
     // scope.
-    var Schema = mongoose.Schema,
-    currentLanguage,
+    var currentLanguage,
     blogID;
-
-    // model
-    var blogSchema = new Schema ({
-        title:    String,
-        content:  String,
-        img:      String,
-        date:     String,
-        author:   String,
-        category: Array
-    });
-    var blog = mongoose.model("Blog", blogSchema);
-    // end model
 
     app.get("/blog", function (req, res) {
         // déifnis la variable a la langue utilisé par le navigateur.
