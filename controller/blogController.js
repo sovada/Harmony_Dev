@@ -11,7 +11,8 @@ module.exports = function (app, translation, blog) {
         // si la langue du navigateur ne fait pas partie des langues dispo, automatiquement traduit en anglais.
         // translation.en = le fichier lang dans config.
         // blog.find correspond a un querie dans ma db
-        blog.find(null, function (err, data) {
+        var query = blog.find(null).sort({date: -1});
+        query.exec(null, function (err, data) {
             if (currentLanguage === "en") {
                 res.render("blog/index", {"translation": translation.en, "datas": data});
             } else if (currentLanguage === "fr") {

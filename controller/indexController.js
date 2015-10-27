@@ -1,4 +1,4 @@
-module.exports = function (app, translation) {
+module.exports = function (app, translation, blog) {
     // scope.
     var currentLanguage;
 
@@ -9,14 +9,19 @@ module.exports = function (app, translation) {
         // Affiche la vue en fonction de la langue
         // si la langue du navigateur ne fait pas partie des langues dispo, automatiquement traduit en anglais.
         // translation.en = le fichier lang dans config.
-        if (currentLanguage === "en") {
-            res.render("index", {"translation": translation.en});
-        } else if (currentLanguage === "fr") {
-            res.render("index", {"translation": translation.fr});
-        } else if (currentLanguage === "es") {
-            res.render("index", {"translation": translation.es});
-        } else {
-            res.render("index", {"translation": translation.en});
-        }
+        var query = blog.find(null);
+        query.limit(2);
+        query.sort({date: -1});
+        query.exec(function (err, data) {
+            if (currentLanguage === "en") {
+                res.render("index", {"translation": translation.en, "datas": data});
+            } else if (currentLanguage === "fr") {
+                res.render("index", {"translation": translation.fr, "datas": data});
+            } else if (currentLanguage === "es") {
+                res.render("index", {"translation": translation.es, "datas": data});
+            } else {
+                res.render("index", {"translation": translation.en, "datas": data});
+            }
+        });
     });
 };

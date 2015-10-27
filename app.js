@@ -12,6 +12,30 @@ var express             = require("express"),
     translation         = translationFile.lang,
     Schema              = mongoose.Schema;
 
+// Blog model
+var blogSchema = new Schema ({
+    title       : String,
+    content     : String,
+    img         : Array,
+    date        : String,
+    author      : String,
+    category    : Array
+});
+var blog = mongoose.model("Blog", blogSchema);
+// end Blog model
+
+// Portfolio model
+var portfolioSchema = new Schema ({
+    title       : String,
+    content     : String,
+    img         : String,
+    date        : String,
+    author      : String,
+    category    : Array
+});
+var portfolio = mongoose.model("Portfolio", portfolioSchema);
+// end Portfolio model
+
 // Connexion à la base de donnée
 mongoose.connect("mongodb://root:PGGSfAUH1325@ds039504.mongolab.com:39504/harmony_dev");
 
@@ -21,22 +45,10 @@ app.use(express.static('assets'));
 // Ici je définis mon template.
 app.set("view engine", "ejs");
 
-// Blog model
-var blogSchema = new Schema ({
-    title:    String,
-    content:  String,
-    img:      String,
-    date:     String,
-    author:   String,
-    category: Array
-});
-var blog = mongoose.model("Blog", blogSchema);
-// end Blog model
-
 // Routing, controller.
-indexController(app, translation, mongoose);
+indexController(app, translation, blog);
 deviController(app, translation, mongoose);
-portfolioController(app, translation, mongoose);
+portfolioController(app, translation, portfolio);
 blogController(app, translation, blog);
 
 app.listen(port);
