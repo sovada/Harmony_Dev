@@ -48,7 +48,7 @@
 
     <div class="pricing-title" style="background: url('/img/blog.jpg'); background-repeat: no-repeat; background-position: center;">
         <h2 style="color: black!important;"><%= translation.mainNav.blog %></h2>
-        <span class="header--ariane" style="color:black!important;"><a href="/" style="color:black!important;"><%= translation.mainNav.home %></a> > <a href="/blog" style="color:black!important;"><%= translation.mainNav.blog %></a> > <a href="#" style="color:black!important;">blog category</a> > blog title </span>
+        <span class="header--ariane" style="color:black!important;"><a href="/" style="color:black!important;"><%= translation.mainNav.home %></a> > <a href="/blog" style="color:black!important;"><%= translation.mainNav.blog %></a> > <a href="#" style="color:black!important;"><%= data.category %></a> > <%= data.title %> </span>
     </div>
 </header>
 
@@ -65,11 +65,11 @@
 
             <h3><%= translation.blog.category %></h3>
             <ul class="category">
-                <li><a href="#">angularJS</a> <span class="how-many">2</span></li>
+                <li><a href="#">angularJS</a> <span class="how-many"><i class="pe-7s-angle-left"></i></span></li>
                 <hr />
-                <li><a href="#">nodeJS</a> <span class="how-many">2</span></li>
+                <li><a href="#">nodeJS</a> <span class="how-many"><i class="pe-7s-angle-left"></i></span></li>
                 <hr />
-                <li><a href="#">RoR</a> <span class="how-many">2</span></li>
+                <li><a href="#">RoR</a> <span class="how-many"><i class="pe-7s-angle-left"></i></span></li>
             </ul>
 
             <h3><%= translation.blog.tag %></h3>

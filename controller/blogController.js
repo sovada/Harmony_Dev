@@ -27,7 +27,6 @@ module.exports = function (app, translation, blog) {
 
     app.get("/blog/:blogID", function (req, res, next) {
         currentLanguage = req.headers["accept-language"][0] + req.headers["accept-language"][1];
-
         // recup le parametre portfolioID de mon URL.
         blogID = req.params.blogID;
 

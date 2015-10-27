@@ -19,7 +19,7 @@ var blogSchema = new Schema ({
     img         : Array,
     date        : String,
     author      : String,
-    category    : Array
+    category    : String
 });
 var blog = mongoose.model("Blog", blogSchema);
 // end Blog model
@@ -31,7 +31,7 @@ var portfolioSchema = new Schema ({
     img         : String,
     date        : String,
     author      : String,
-    category    : Array
+    category    : String
 });
 var portfolio = mongoose.model("Portfolio", portfolioSchema);
 // end Portfolio model
