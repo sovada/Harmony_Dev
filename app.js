@@ -11,12 +11,12 @@ var express             = require("express"),
     translation         = translationFile.lang;
 
 // Tout ce qui trouve dans le dossier assets sera accessible via les url /img, /css etc
-// donc possibilité d'utiliser en html l'appel a mes fichier css, js, img qui sont dans se dossier
+// donc possibilité d'utiliser en html l'appel à mes fichier css, js, img qui sont dans ce dossier.
 app.use(express.static('assets'));
-// Ici je définis mon template
+// Ici je définis mon template.
 app.set("view engine", "ejs");
 
-// Routing, controller
+// Routing, controller.
 indexController(app, translation);
 deviController(app, translation);
 portfolioController(app, translation);
