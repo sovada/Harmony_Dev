@@ -34,15 +34,17 @@ module.exports = function (app, translation, blog) {
 
         blog.findOne({"_id": blogID}, function (err, data) {
             var query = blog.find().distinct("category", function (err, category) {
-                if (currentLanguage === "en") {
-                    res.render("blog/single", {"translation": translation.en, "id": blogID, "data": data, "category" : category});
-                } else if (currentLanguage === "fr") {
-                    res.render("blog/single", {"translation": translation.fr, "id": blogID, "data": data, "category" : category});
-                } else if (currentLanguage === "es") {
-                    res.render("blog/single", {"translation": translation.es, "id": blogID, "data": data, "category" : category});
-                } else {
-                    res.render("blog/single", {"translation": translation.en, "id": blogID, "data": data, "category" : category});
-                }
+                var query = blog.find().sort({date: -1}).exec(null, function (err, blog) {
+                    if (currentLanguage === "en") {
+                        res.render("blog/single", {"translation": translation.en, "id": blogID, "data": data, "category" : category, "blog": blog});
+                    } else if (currentLanguage === "fr") {
+                        res.render("blog/single", {"translation": translation.fr, "id": blogID, "data": data, "category" : category, "blog": blog});
+                    } else if (currentLanguage === "es") {
+                        res.render("blog/single", {"translation": translation.es, "id": blogID, "data": data, "category" : category, "blog": blog});
+                    } else {
+                        res.render("blog/single", {"translation": translation.en, "id": blogID, "data": data, "category" : category, "blog": blog});
+                    }
+                });
             });
         });
     });

@@ -58,9 +58,9 @@
         <div class="right-side">
             <h3 class="inline"><%= translation.blog.recent %></h3>
             <ul class="recent">
-                <li><i class="pe-7s-angle-right-circle"></i> <a href="#">Title post</a> <br /><br /><span class="post-date"><i class="pe-7s-date"></i> March 2015</span></li>
-                <li><i class="pe-7s-angle-right-circle"></i> <a href="#">Title post</a> <br /><br /><span class="post-date"><i class="pe-7s-date"></i> March 2015</span></li>
-                <li><i class="pe-7s-angle-right-circle"></i> <a href="#">Title post</a> <br /><br /><span class="post-date"><i class="pe-7s-date"></i> March 2015</span></li>
+                <% blog.forEach(function(data) { %>
+                    <li><i class="pe-7s-angle-right-circle"></i> <a href="/blog/<%= data._id %>"><%= data.title %></a> <br /><br /><span class="post-date"><i class="pe-7s-date"></i> <%= data.date %></span></li>
+                <% }); %>
             </ul>
 
             <h3><%= translation.blog.category %></h3>
