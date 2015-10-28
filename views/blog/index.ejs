@@ -65,20 +65,17 @@
 
             <h3><%= translation.blog.category %></h3>
             <ul class="category">
-                <% datas.forEach(function(data) { %>
-                    <li><a href="#"><%= data.category %></a> <span class="how-many"><i class="pe-7s-angle-left"></i></span></li>
+                <% category.forEach(function(data) { %>
+                    <li><a href="#"><%= data %></a> <span class="how-many"><i class="pe-7s-angle-left"></i></span></li>
                     <hr />
                 <% }); %>
             </ul>
 
             <h3><%= translation.blog.tag %></h3>
             <div class="cloud">
-                <span><a href="#">angularJS</a></span>
-                <span><a href="#">nodeJS</a></span>
-                <span><a href="#">Javascript</a></span>
-                <span><a href="#">RoR</a></span>
-                <span><a href="#">MEAN</a></span>
-                <span><a href="#">Meteor</a></span>
+                <% category.forEach(function(data) { %>
+                    <span><a href="#"><%= data %></a></span>
+                <% }); %>
             </div>
 
         </div>

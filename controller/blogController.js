@@ -13,15 +13,17 @@ module.exports = function (app, translation, blog) {
         // blog.find correspond a un querie dans ma db
         var query = blog.find(null).sort({date: -1});
         query.exec(null, function (err, data) {
-            if (currentLanguage === "en") {
-                res.render("blog/index", {"translation": translation.en, "datas": data});
-            } else if (currentLanguage === "fr") {
-                res.render("blog/index", {"translation": translation.fr, "datas": data});
-            } else if (currentLanguage === "es") {
-                res.render("blog/index", {"translation": translation.es, "datas": data});
-            } else {
-                res.render("blog/index", {"translation": translation.en, "datas": data});
-            }
+            var query = blog.find().distinct("category", function (err, category) {
+                if (currentLanguage === "en") {
+                    res.render("blog/index", {"translation": translation.en, "datas": data, "category" : category});
+                } else if (currentLanguage === "fr") {
+                    res.render("blog/index", {"translation": translation.fr, "datas": data, "category" : category});
+                } else if (currentLanguage === "es") {
+                    res.render("blog/index", {"translation": translation.es, "datas": data, "category" : category});
+                } else {
+                    res.render("blog/index", {"translation": translation.en, "datas": data, "category" : category});
+                }
+            });
         });
     });
 
