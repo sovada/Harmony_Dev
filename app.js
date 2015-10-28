@@ -46,7 +46,7 @@ app.use(express.static('assets'));
 app.set("view engine", "ejs");
 
 // Routing, controller.
-indexController(app, translation, blog);
+indexController(app, translation, blog, portfolio);
 deviController(app, translation, mongoose);
 portfolioController(app, translation, portfolio);
 blogController(app, translation, blog);

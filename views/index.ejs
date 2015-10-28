@@ -112,20 +112,15 @@
                 <h1 class="white-light--resizeh1"><%= translation.portfolioSection.title %></h1>
                 <p><%= translation.portfolioSection.subtitle %></p>
 
+                <% portfolios.forEach(function(data) { %>
+                    <div class= "white-light--work" style="background-image: url('http://lorempicsum.com/futurama/600/300/2');">
+                        <span class="white-light--work---hide">
+                            <h3><a href="/portfolio/<%= data._id %>"><%= data.title %></a></h3>
+                            <p><%= data.content %></p>
+                        </span>
+                    </div>
+                <% }); %>
 
-                <div class= "white-light--work" style="background-image: url('http://lorempicsum.com/futurama/600/300/2');">
-                    <span class="white-light--work---hide">
-                        <h3><a href="#">Portfolio Title</a></h3>
-                        <p>Portfolio description</p>
-                    </span>
-                </div>
-
-                <div class= "white-light--work"  style="background-image: url('http://lorempicsum.com/futurama/600/300/2');">
-                    <span class="white-light--work---hide">
-                        <h3><a href="#">Portfolio Title</a></h3>
-                        <p>Portfolio description</p>
-                    </span>
-                </div>
             </section>
         </article>
 
@@ -167,7 +162,7 @@
                 <h4 class="align-right margin-right float-right"><a href="/blog"><%= translation.blogSection.subtitle %> <i class="fa fa-long-arrow-right"></i></a></h4>
                 <br class="clear" />
 
-                <% datas.forEach(function(data) { %>
+                <% blogs.forEach(function(data) { %>
                     <div class= "white-light--work" style="background-image: url('<%= data.img %>');">
                         <span class="white-light--work---hide">
                             <h3><a href="/blog/<%= data._id %>"><%= data.title %></a></h3>

@@ -1,4 +1,4 @@
-module.exports = function (app, translation, blog) {
+module.exports = function (app, translation, blog, portfolio) {
     // scope.
     var currentLanguage;
 
@@ -12,16 +12,22 @@ module.exports = function (app, translation, blog) {
         var query = blog.find(null);
         query.limit(2);
         query.sort({date: -1});
-        query.exec(function (err, data) {
-            if (currentLanguage === "en") {
-                res.render("index", {"translation": translation.en, "datas": data});
-            } else if (currentLanguage === "fr") {
-                res.render("index", {"translation": translation.fr, "datas": data});
-            } else if (currentLanguage === "es") {
-                res.render("index", {"translation": translation.es, "datas": data});
-            } else {
-                res.render("index", {"translation": translation.en, "datas": data});
-            }
+        query.exec(function (err, blogs) {
+            var query2 = portfolio.find(null);
+            query2.limit(2);
+            query2.sort({data: -1});
+            query2.exec(function (err, portfolios) {
+                if (currentLanguage === "en") {
+                    res.render("index", {"translation": translation.en, "blogs": blogs, "portfolios": portfolios});
+                    console.log(portfolios);
+                } else if (currentLanguage === "fr") {
+                    res.render("index", {"translation": translation.fr, "blogs": blogs, "portfolios": portfolios});
+                } else if (currentLanguage === "es") {
+                    res.render("index", {"translation": translation.es, "blogs": blogs, "portfolios": portfolios});
+                } else {
+                    res.render("index", {"translation": translation.en, "blogs": blogs, "portfolios": portfolios});
+                }
+            });
         });
     });
 };
