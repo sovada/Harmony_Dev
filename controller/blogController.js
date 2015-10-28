@@ -33,15 +33,17 @@ module.exports = function (app, translation, blog) {
         blogID = req.params.blogID;
 
         blog.findOne({"_id": blogID}, function (err, data) {
-            if (currentLanguage === "en") {
-                res.render("blog/single", {"translation": translation.en, "id": blogID, "data": data});
-            } else if (currentLanguage === "fr") {
-                res.render("blog/single", {"translation": translation.fr, "id": blogID, "data": data});
-            } else if (currentLanguage === "es") {
-                res.render("blog/single", {"translation": translation.es, "id": blogID, "data": data});
-            } else {
-                res.render("blog/single", {"translation": translation.en, "id": blogID, "data": data});
-            }
+            var query = blog.find().distinct("category", function (err, category) {
+                if (currentLanguage === "en") {
+                    res.render("blog/single", {"translation": translation.en, "id": blogID, "data": data, "category" : category});
+                } else if (currentLanguage === "fr") {
+                    res.render("blog/single", {"translation": translation.fr, "id": blogID, "data": data, "category" : category});
+                } else if (currentLanguage === "es") {
+                    res.render("blog/single", {"translation": translation.es, "id": blogID, "data": data, "category" : category});
+                } else {
+                    res.render("blog/single", {"translation": translation.en, "id": blogID, "data": data, "category" : category});
+                }
+            });
         });
     });
 

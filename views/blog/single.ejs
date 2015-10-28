@@ -40,8 +40,8 @@
                             <li><a href="/price"><%= translation.mainNav.pricing %></a></li>
                         </ul>
                     </li>
-                    <li><a href="portfolio" title="Portfolio"><%= translation.mainNav.portfolio %></a></li>
-                    <li><a href="blog" title="Blog"><%= translation.mainNav.blog %></a></li>
+                    <li><a href="/portfolio" title="Portfolio"><%= translation.mainNav.portfolio %></a></li>
+                    <li><a href="/blog" title="Blog"><%= translation.mainNav.blog %></a></li>
                 </ul>
             </nav>
     <br class="clear" />
@@ -65,21 +65,17 @@
 
             <h3><%= translation.blog.category %></h3>
             <ul class="category">
-                <li><a href="#">angularJS</a> <span class="how-many"><i class="pe-7s-angle-left"></i></span></li>
-                <hr />
-                <li><a href="#">nodeJS</a> <span class="how-many"><i class="pe-7s-angle-left"></i></span></li>
-                <hr />
-                <li><a href="#">RoR</a> <span class="how-many"><i class="pe-7s-angle-left"></i></span></li>
+                <% category.forEach(function(data) { %>
+                    <li><a href="/blog/category/<%= data %>"><%= data %></a> <span class="how-many"><i class="pe-7s-angle-left"></i></span></li>
+                    <hr />
+                <% }); %>
             </ul>
 
             <h3><%= translation.blog.tag %></h3>
             <div class="cloud">
-                <span><a href="#">angularJS</a></span>
-                <span><a href="#">nodeJS</a></span>
-                <span><a href="#">Javascript</a></span>
-                <span><a href="#">RoR</a></span>
-                <span><a href="#">MEAN</a></span>
-                <span><a href="#">Meteor</a></span>
+                <% category.forEach(function(data) { %>
+                    <span><a href="/blog/category/<%= data %>"><%= data %></a></span>
+                <% }); %>
             </div>
 
         </div>
