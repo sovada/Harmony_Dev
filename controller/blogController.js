@@ -44,4 +44,23 @@ module.exports = function (app, translation, blog) {
             }
         });
     });
+
+    app.get("/blog/category/:category", function (req, res, next) {
+        currentLanguage = req.headers["accept-language"][0] + req.headers["accept-language"][1];
+        categoryUrl = req.params.category;
+
+        blog.find({"category": categoryUrl}, function (err, data) {
+            var query = blog.find().distinct("category", function (err, category) {
+                if (currentLanguage === "en") {
+                    res.render("blog/category", {"translation": translation.en, "datas": data, "category" : category, "categoryUrl": categoryUrl});
+                } else if (currentLanguage === "fr") {
+                    res.render("blog/category", {"translation": translation.fr, "datas": data, "category" : category, "categoryUrl": categoryUrl});
+                } else if (currentLanguage === "es") {
+                    res.render("blog/category", {"translation": translation.es, "datas": data, "category" : category, "categoryUrl": categoryUrl});
+                } else {
+                    res.render("blog/category", {"translation": translation.en, "datas": data, "category" : category, "categoryUrl": categoryUrl});
+                }
+            });
+        })
+    });
 };
