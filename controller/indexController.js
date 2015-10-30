@@ -19,7 +19,6 @@ module.exports = function (app, translation, blog, portfolio) {
             query2.exec(function (err, portfolios) {
                 if (currentLanguage === "en") {
                     res.render("index", {"translation": translation.en, "blogs": blogs, "portfolios": portfolios});
-                    console.log(portfolios);
                 } else if (currentLanguage === "fr") {
                     res.render("index", {"translation": translation.fr, "blogs": blogs, "portfolios": portfolios});
                 } else if (currentLanguage === "es") {
