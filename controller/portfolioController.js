@@ -1,4 +1,4 @@
-module.exports = function (app, translation) {
+module.exports = function (app, translation, portfolio) {
     // scope.
     var currentLanguage,
     portfolioID;
@@ -26,15 +26,16 @@ module.exports = function (app, translation) {
 
         // recupère le parametre blogID de mon URL.
         portfolioID = req.params.portfolioID;
-
-        if (currentLanguage === "en") {
-            res.render("portfolio/single", {"translation": translation.en, "id": portfolioID});
-        } else if (currentLanguage === "fr") {
-            res.render("portfolio/single", {"translation": translation.fr, "id": portfolioID});
-        } else if (currentLanguage === "es") {
-            res.render("portfolio/single", {"translation": translation.es, "id": portfolioID});
-        } else {
-            res.render("portfolio/single", {"translation": translation.en, "id": portfolioID});
-        }
+        portfolio.findOne({"_id": portfolioID}, function (err, data) {
+            if (currentLanguage === "en") {
+                res.render("portfolio/single", {"translation": translation.en, "id": portfolioID, "data": data});
+            } else if (currentLanguage === "fr") {
+                res.render("portfolio/single", {"translation": translation.fr, "id": portfolioID, "data": data});
+            } else if (currentLanguage === "es") {
+                res.render("portfolio/single", {"translation": translation.es, "id": portfolioID, "data": data});
+            } else {
+                res.render("portfolio/single", {"translation": translation.en, "id": portfolioID, "data": data});
+            }
+        });
     });
 };

@@ -31,7 +31,8 @@ var portfolioSchema = new Schema ({
     img         : String,
     date        : String,
     author      : String,
-    category    : String
+    category    : String,
+    url         : String
 });
 var portfolio = mongoose.model("Portfolio", portfolioSchema);
 // end Portfolio model
