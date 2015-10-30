@@ -10,15 +10,17 @@ module.exports = function (app, translation, portfolio) {
         // Affiche la vue en fonction de la langue
         // si la langue du navigateur ne fait pas partie des langues dispo, automatiquement traduit en anglais.
         // translation.en = le fichier lang dans config.
-        if (currentLanguage === "en") {
-            res.render("portfolio/index", {"translation": translation.en});
-        } else if (currentLanguage === "fr") {
-            res.render("portfolio/index", {"translation": translation.fr});
-        } else if (currentLanguage === "es") {
-            res.render("portfolio/index", {"translation": translation.es});
-        } else {
-            res.render("portfolio/index", {"translation": translation.en});
-        }
+        portfolio.find(function(err, data) {
+            if (currentLanguage === "en") {
+                res.render("portfolio/index", {"translation": translation.en, "data": data});
+            } else if (currentLanguage === "fr") {
+                res.render("portfolio/index", {"translation": translation.fr, "data": data});
+            } else if (currentLanguage === "es") {
+                res.render("portfolio/index", {"translation": translation.es, "data": data});
+            } else {
+                res.render("portfolio/index", {"translation": translation.en, "data": data});
+            }
+        });
     });
 
     app.get("/portfolio/:portfolioID", function (req, res, next) {
