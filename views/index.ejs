@@ -128,10 +128,19 @@
             <section>
                 <h3><i class="pe-7s-portfolio"></i> <%= translation.portfolioSection.more %></h3> <button type="button" title="Portfolio" onclick="window.location.href='portfolio'">Portfolio</button> <button type="button" title="Newsletter" id="getEmail"><%= translation.portfolioSection.subscribe%></button>
 
-                <form name="subscribe" id="subscribe" class="subscribe">
-                    <input type="email" class="email" placeholder="e-mail" />
+                <form name="subscribe" id="subscribe" class="subscribe" method="post" action="/">
+                    <input type="email" class="email" placeholder="e-mail" name="email"/>
                     <br />
-                    <input type="button" value="<%= translation.submit %>" class="email--submit" id="emailClicked"/>
+                    <input type="button" value="<%= translation.submit %>" class="email--submit" id="emailClicked" onclick="ajaxEmail()"/>
+                    <script>
+                        ;function ajaxEmail () {
+                            $.ajax({
+                                type: "POST",
+                                url: "/",
+                                data: {email: $(".email").val()}
+                            });
+                        };
+                    </script>
                 </form>
                 <span id="thanks"><h2><%= translation.thanks %>!</h2></span>
             </section>

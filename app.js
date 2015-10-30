@@ -1,6 +1,7 @@
 var express             = require("express"),
     fs                  = require("fs"),
     mongoose            = require("mongoose"),
+    bodyParser          = require("body-parser")
     app                 = express(),
     blogController      = require("./controller/blogController"),
     portfolioController = require("./controller/portfolioController"),
@@ -37,6 +38,13 @@ var portfolioSchema = new Schema ({
 var portfolio = mongoose.model("Portfolio", portfolioSchema);
 // end Portfolio model
 
+// Subscribe model
+var subscribeSchema = new Schema ({
+    email       : String
+});
+var subscribe = mongoose.model("Subscribe", subscribeSchema);
+// end Subscribe model
+
 // Connexion à la base de donnée
 mongoose.connect("mongodb://root:PGGSfAUH1325@ds039504.mongolab.com:39504/harmony_dev");
 
@@ -45,9 +53,11 @@ mongoose.connect("mongodb://root:PGGSfAUH1325@ds039504.mongolab.com:39504/harmon
 app.use(express.static('assets'));
 // Ici je définis mon template.
 app.set("view engine", "ejs");
+// body parser en middleware
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Routing, controller.
-indexController(app, translation, blog, portfolio);
+indexController(app, translation, blog, portfolio, subscribe);
 deviController(app, translation, mongoose);
 portfolioController(app, translation, portfolio);
 blogController(app, translation, blog);
