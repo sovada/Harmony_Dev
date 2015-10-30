@@ -111,9 +111,9 @@
             <section>
                 <h1 class="white-light--resizeh1"><%= translation.portfolioSection.title %></h1>
                 <p><%= translation.portfolioSection.subtitle %></p>
-
+                
                 <% portfolios.forEach(function(data) { %>
-                    <div class= "white-light--work" style="background-image: url('http://lorempicsum.com/futurama/600/300/2');">
+                    <div class= "white-light--work" style="background-image: url('<%= (data.img).split(",")[0] %>');">
                         <span class="white-light--work---hide">
                             <h3><a href="/portfolio/<%= data._id %>"><%= data.title %></a></h3>
                             <p><%= data.content %></p>
