@@ -7,6 +7,7 @@ var express             = require("express"),
     portfolioController = require("./controller/portfolioController"),
     deviController      = require("./controller/deviController"),
     indexController     = require("./controller/indexController"),
+    adminController     = require("./controller/adminController"),
     port                = process.env.PORT || 9000,
     env                 = "localhost://",
     translationFile     = JSON.parse(fs.readFileSync(__dirname + "/config/lang.json")),
@@ -61,6 +62,7 @@ indexController(app, translation, blog, portfolio, subscribe);
 deviController(app, translation, mongoose);
 portfolioController(app, translation, portfolio);
 blogController(app, translation, blog);
+adminController(app, blog, portfolio);
 
 app.listen(port);
 console.log(`Server's running at ${env}${port}`);

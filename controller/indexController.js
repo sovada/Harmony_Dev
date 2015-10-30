@@ -1,7 +1,6 @@
 module.exports = function (app, translation, blog, portfolio, subscribe) {
     // scope.
-    var subscribeCorrect = true,
-        currentLanguage;
+    var currentLanguage;
 
     app.get("/", function (req, res){
         // déifnis la variable a la langue utilisé par le navigateur.
@@ -35,7 +34,6 @@ module.exports = function (app, translation, blog, portfolio, subscribe) {
         var email = req.body.email;
         if (email.indexOf("@") !== -1 && email.indexOf(".") !== -1 && email.length > 8) {
             var newSubscribe = new subscribe({"email": email}).save();
-            subscribeCorrect = true;
             res.redirect('back');
         }
     });
