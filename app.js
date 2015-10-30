@@ -1,7 +1,8 @@
 var express             = require("express"),
     fs                  = require("fs"),
     mongoose            = require("mongoose"),
-    bodyParser          = require("body-parser")
+    bodyParser          = require("body-parser"),
+    cookieParser        = require("cookie-parser")
     app                 = express(),
     blogController      = require("./controller/blogController"),
     portfolioController = require("./controller/portfolioController"),
@@ -46,6 +47,18 @@ var subscribeSchema = new Schema ({
 var subscribe = mongoose.model("Subscribe", subscribeSchema);
 // end Subscribe model
 
+// Admin model
+var adminSchema = new Schema ({
+    email       : String,
+    password    : String,
+    inc         : String,
+    name        : String,
+    location    : String,
+    SU          : Boolean
+});
+var admin = mongoose.model("Admin", adminSchema);
+// End admin model
+
 // Connexion à la base de donnée
 mongoose.connect("mongodb://root:PGGSfAUH1325@ds039504.mongolab.com:39504/harmony_dev");
 
@@ -56,13 +69,14 @@ app.use(express.static('assets'));
 app.set("view engine", "ejs");
 // body parser en middleware
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 // Routing, controller.
 indexController(app, translation, blog, portfolio, subscribe);
 deviController(app, translation, mongoose);
 portfolioController(app, translation, portfolio);
 blogController(app, translation, blog);
-adminController(app, blog, portfolio);
+adminController(app, admin, blog, portfolio, subscribe);
 
 app.listen(port);
 console.log(`Server's running at ${env}${port}`);

@@ -113,6 +113,17 @@ header nav ul li ul li a {color: white!important;}
 /* ---------------------- End Blog ----------------------- */
 
 
+/* ------------------------ Admin ------------------------- */
+.admin-article { padding-top: 2.5%; padding-bottom: 2.5%;display: block;}
+.admin-article form input {display: block; width: 50%; margin-left: 25%; font-size: 20px; font-family: "Montserrat", "sans-serif"; color: #333333;}
+.admin-article form input {margin-top: 1%; margin-bottom: 1%; border: solid 1px silver-light; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+.admin-article form input {background-color: white;}
+.admin-article form input:last-child {-webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75); -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75); box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);}
+.admin-article form input:last-child {text-transform: uppercase; margin-top: 2.5%;}
+.admin-article form input:last-child:active {-webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0); -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0); box-shadow: 2px 2px 5px 0px rgba(0,0,0,0);}
+/* ---------------------- End admin ----------------------- */
+
+
 /* -------------------------- Footer ------------------------- */
 footer {background-color: #1d1d1d; margin:0!important; padding-top: 2%;}
 footer h5{font-size: 14px;}
