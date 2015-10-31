@@ -33,6 +33,24 @@ module.exports = function (app, admin, blog, portfolio, subscribe) {
         req.cookies.admin ? res.render("admin/index") : res.redirect("/");
     });
 
+    app.get("/hd-admin/subscribe", function (req, res) {
+        if (req.cookies.admin) {
+            subscribe.find(function (err, data) {
+                res.render("admin/subscribe", {"data": data});
+            });
+        } else {
+            res.redirect("/");
+        }
+    });
+
+    app.get("/hd-admin/blog", function (req, res) {
+        req.cookies.admin ? res.render("admin/blog") : res.redirect("/");
+    });
+
+    app.get("/hd-admin/portfolio", function (req, res) {
+        req.cookies.admin ? res.render("admin/portfolio") : res.redirect("/");
+    });
+
     app.get("/hd-admin/logout", function (req, res) {
         // supprime le cookie admin
         res.clearCookie("admin", {path: "/"});

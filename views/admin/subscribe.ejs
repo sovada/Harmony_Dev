@@ -51,16 +51,24 @@
 
             <div class="pricing-title">
                 <h2>Administration</h2>
-                <span class="header--ariane"><a href="/">Home</a> > <a href="/hd-admin">Administration</a></span>
+                <span class="header--ariane"><a href="/">Home</a> > <a href="/hd-admin">Administration</a> > Subscribers</span>
             </div>
         </header>
 
-        <article>
+        <article class="subscribe-article">
             <div class="container">
-                <h1>Welcome Jérémy</h1>
-                <p>
-                    t
-                </p>
+                <table class="subscribe-table">
+                    <tr>
+                        <th><h3>id:</h3></th>
+                        <th><h3>email:</h3></th>
+                    </tr>
+                    <% data.forEach(function (result) { %>
+                        <tr>
+                            <td><%= result.id %></td>
+                            <td><%= result.email %></td>
+                        </tr>
+                    <% }); %>
+                </table>
             </div>
         </article>
 
