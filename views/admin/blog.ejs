@@ -57,7 +57,27 @@
 
         <article>
             <div class="container">
-
+                <table class="blog-table">
+                    <tr>
+                        <th>Title:</th>
+                        <th>Author:</th>
+                        <th>Date:</th>
+                        <th>Category:</th>
+                        <th>Update:</th>
+                        <th>Delete:</th>
+                    </tr>
+                    <% data.forEach(function (blog) { %>
+                        <tr>
+                            <td><%= blog.title %></td>
+                            <td><%= blog.author %></td>
+                            <td><%= blog.date %></td>
+                            <td><%= blog.category %></td>
+                            <td><a href=""><i class="fa fa-pencil"></i></a></td>
+                            <td><a href=""><i class="fa fa-ban"></i></a></td>
+                        </tr>
+                    <% }); %>
+                </table>
+                <button type="button" value="add one" style="padding: 1%; background-color: white; border: solid 1px silver; margin-bottom: 1%;">+</button>
             </div>
         </article>
 

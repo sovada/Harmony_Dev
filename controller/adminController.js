@@ -44,11 +44,24 @@ module.exports = function (app, admin, blog, portfolio, subscribe) {
     });
 
     app.get("/hd-admin/blog", function (req, res) {
-        req.cookies.admin ? res.render("admin/blog") : res.redirect("/");
+        if (req.cookies.admin) {
+            blog.find(function (err, data) {
+                console.log(data);
+                res.render("admin/blog", {"data": data});
+            });
+        } else {
+            res.redirect("/");
+        }
     });
 
     app.get("/hd-admin/portfolio", function (req, res) {
-        req.cookies.admin ? res.render("admin/portfolio") : res.redirect("/");
+        if (req.cookies.admin) {
+            portfolio.find(function (err, data) {
+                res.render("admin/portfolio", {"data": data});
+            });
+        } else {
+            res.redirect("/");
+        }
     });
 
     app.get("/hd-admin/logout", function (req, res) {
@@ -56,4 +69,5 @@ module.exports = function (app, admin, blog, portfolio, subscribe) {
         res.clearCookie("admin", {path: "/"});
         res.redirect("/");
     });
+
 };
