@@ -46,7 +46,6 @@ module.exports = function (app, admin, blog, portfolio, subscribe) {
     app.get("/hd-admin/blog", function (req, res) {
         if (req.cookies.admin) {
             blog.find(function (err, data) {
-                console.log(data);
                 res.render("admin/blog", {"data": data});
             });
         } else {
@@ -68,6 +67,17 @@ module.exports = function (app, admin, blog, portfolio, subscribe) {
         // supprime le cookie admin
         res.clearCookie("admin", {path: "/"});
         res.redirect("/");
+    });
+
+    app.post("/hd-admin/blog/delete", function (req, res, next) {
+        if (req.cookies.admin) {
+            blog.remove({"_id": req.body.blogID}, function (err, data) {
+                
+            });
+        } else {
+            res.status(404).send("Sorry you can't go here!");
+        }
+
     });
 
 };

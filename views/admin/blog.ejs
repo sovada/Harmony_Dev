@@ -67,17 +67,47 @@
                         <th>Delete:</th>
                     </tr>
                     <% data.forEach(function (blog) { %>
-                        <tr>
+                        <tr id="<%= blog._id %>">
                             <td><%= blog.title %></td>
                             <td><%= blog.author %></td>
                             <td><%= blog.date %></td>
                             <td><%= blog.category %></td>
                             <td><a href=""><i class="fa fa-pencil"></i></a></td>
-                            <td><a href=""><i class="fa fa-ban"></i></a></td>
+                            <td><a href="#" onclick="ajaxBlogDelete('<%= blog._id %>')"><i class="fa fa-ban"></i></a></td>
                         </tr>
                     <% }); %>
+
+                    <div class="modal margin-right">
+                        <h4>!Caution!</h4>
+                        <p>!Would do you really like to delete this post?</p>
+                        <button id="confirm">Yes I do</button>
+                    </div>
+
+                    <script>
+                        $(".modal").hide();
+                        var ajaxBlogDelete = function (id) {
+                            document.getElementById("confirm").addEventListener("click", function () {
+                                $.ajax({
+                                    type    : "POST",
+                                    url     : "/hd-admin/blog/delete",
+                                    data    : {"blogID" : id}
+                                });
+                                hideModal.apply();
+                                var removing = "#" + id;
+                                $(removing).fadeOut(500);
+                            });
+                            showModal.apply();
+                        };
+                        var showModal = function () {
+                            $(".modal").fadeIn(1000);
+                        };
+                        var hideModal = function () {
+                            $(".modal").fadeOut(300);
+                        }
+                    </script>
+
                 </table>
-                <button type="button" value="add one" style="padding: 1%; background-color: white; border: solid 1px silver; margin-bottom: 1%;">+</button>
+                <button type="button" value="add one" style="padding: 1%; background-color: white; border: solid 1px silver; margin-bottom: 1%;" onclick="window.location.href='/hd-admin/blog/add'">+</button>
             </div>
         </article>
 

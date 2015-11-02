@@ -127,10 +127,13 @@ header nav ul li ul li a {color: white!important;}
 .subscribe-table tr td{padding: 1%; border-bottom: solid 1px white; border-right: solid 1px white; color: white; font-family: "Montserrat", "sans-serif"}
 .subscribe-table tr th {text-align: left; padding: 1%; border-bottom: solid white 2px; border-right: solid 1px white;}
 
-.blog-table {width: 100%; background-color: #cccccc; margin-bottom: 2%; color:white;}
+.blog-table {width: 100%; background-color: #cccccc; margin-bottom: 2%; color:white; margin-top : 2%;}
 .blog-table th {border-bottom: 2px solid white; text-align: left; padding: 1%;}
 .blog-table td {padding: 1%; border-bottom: 1px white solid;}
 .blog-table td i {color: white}
+
+.modal {width: auto; background-color: #cccccc;padding: 2%; margin-top: 2%; margin-bottom: 2%; text-align: center;}
+.modal button {margin-top: 2%; padding: 2%;font-family: "Montserrat", "sans-serif"; color: #333333; background-color:white; border: solid 1px silver; text-transform: uppercase;}
 /* ---------------------- End admin ----------------------- */
 
 
