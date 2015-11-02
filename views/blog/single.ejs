@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/icon/Icon-font-7/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
     <link rel="stylesheet" href="/icon/font-awesome/css/font-awesome.min.css">
     <!-- End Icon -->
-    <title><%= data.title %></title>
+    <title><%= data.titleEN %></title>
 </head>
 <body id="body">
 <header>
@@ -48,7 +48,17 @@
 
     <div class="pricing-title" style="background: url('/img/blog.jpg'); background-repeat: no-repeat; background-position: center; background-size: 100%;">
         <h2 style="color: black!important;"><%= translation.mainNav.blog %></h2>
-        <span class="header--ariane" style="color:black!important;"><a href="/" style="color:black!important;"><%= translation.mainNav.home %></a> > <a href="/blog" style="color:black!important;"><%= translation.mainNav.blog %></a> > <a href="/blog/category/<%= data.category %>" style="color:black!important;"><%= data.category %></a> > <%= data.title %> </span>
+        <span class="header--ariane" style="color:black!important;"><a href="/" style="color:black!important;"><%= translation.mainNav.home %></a> > <a href="/blog" style="color:black!important;"><%= translation.mainNav.blog %></a> > <a href="/blog/category/<%= data.category %>" style="color:black!important;"><%= data.category %></a> >
+            <% if (lang === "en") { %>
+                <%= data.titleEN %>
+            <% } %>
+            <% if (lang === "fr") { %>
+                <%= data.titleFR %>
+            <% } %>
+            <% if (lang === "es") { %>
+                <%= data.titleES %>
+            <% } %>
+        </span>
     </div>
 </header>
 
@@ -59,7 +69,17 @@
             <h3 class="inline"><%= translation.blog.recent %></h3>
             <ul class="recent">
                 <% blog.forEach(function(data) { %>
-                    <li><i class="pe-7s-angle-right-circle"></i> <a href="/blog/<%= data._id %>"><%= data.title %></a> <br /><br /><span class="post-date"><i class="pe-7s-date"></i> <%= data.date %></span></li>
+                    <li><i class="pe-7s-angle-right-circle"></i> <a href="/blog/<%= data._id %>">
+                        <% if (lang === "en") { %>
+                            <%= data.titleEN %>
+                        <% } %>
+                        <% if (lang === "fr") { %>
+                            <%= data.titleFR %>
+                        <% } %>
+                        <% if (lang === "es") { %>
+                            <%= data.titleES %>
+                        <% } %>
+                    </a> <br /><br /><span class="post-date"><i class="pe-7s-date"></i> <%= data.date %></span></li>
                 <% }); %>
             </ul>
 
@@ -81,9 +101,21 @@
         </div>
 
         <article class="post">
-            <img src="<%= data.img %>" alt="<%= data.title %>" title="<%= data.title %>"/>
-            <h1><%= data.title %></h1>
-            <p><%= data.content %></p>
+            <img src="/<%= data.img %>" alt="<%= data.title %>" title="<%= data.title %>"/>
+
+            <% if (lang === "en") { %>
+            <h1><%= data.titleEN %></h1>
+            <p><%= data.contentEN %></p>
+            <% } %>
+            <% if (lang === "fr") { %>
+            <h1><%= data.titleFR %></h1>
+            <p><%= data.contentFR %></p>
+            <% } %>
+            <% if (lang === "es") { %>
+            <h1><%= data.titleES %></h1>
+            <p><%= data.contentES %></p>
+            <% } %>
+
             <div class="link">
                 <span><i class="pe-7s-user"></i> <%= data.author %></span>
                 <span><i class="pe-7s-date"></i> <%= data.date %></span>

@@ -134,6 +134,10 @@ header nav ul li ul li a {color: white!important;}
 
 .modal {width: auto; background-color: #cccccc;padding: 2%; margin-top: 2%; margin-bottom: 2%; text-align: center;}
 .modal button {margin-top: 2%; padding: 2%;font-family: "Montserrat", "sans-serif"; color: #333333; background-color:white; border: solid 1px silver; text-transform: uppercase;}
+
+.form-to-add-post {width: 100%;}
+.form-to-add-post input {display: block; width: 50%; padding: 0.5%; margin-top: 0.5%; margin-bottom: 0.5%; margin-left: 25%; font-size: 15px; font-family: "Montserrat", "sans-serif";}
+.form-to-add-post textarea {display: block; width: 50%; height: 300px; margin-left: 25%; margin-top: 0.5%; margin-bottom: 0.5%; font-size: 15px; font-family: "Montserrat", "sans-serif";}
 /* ---------------------- End admin ----------------------- */
 
 

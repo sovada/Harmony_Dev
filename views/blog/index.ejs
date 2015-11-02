@@ -59,7 +59,17 @@
             <h3 class="inline"><%= translation.blog.recent %></h3>
             <ul class="recent">
                 <% datas.forEach(function(data) { %>
-                    <li><i class="pe-7s-angle-right-circle"></i> <a href="/blog/<%= data._id %>"><%= data.title %></a> <br /><br /><span class="post-date"><i class="pe-7s-date"></i> <%= data.date %></span></li>
+                    <li><i class="pe-7s-angle-right-circle"></i> <a href="/blog/<%= data._id %>">
+                        <% if (lang === "en") { %>
+                            <%= data.titleEN %>
+                        <% } %>
+                        <% if (lang === "fr") { %>
+                            <%= data.titleFR %>
+                        <% } %>
+                        <% if (lang === "es") { %>
+                            <%= data.titleES %>
+                        <% } %>
+                    </a> <br /><br /><span class="post-date"><i class="pe-7s-date"></i> <%= data.date %></span></li>
                 <% }); %>
             </ul>
 
@@ -83,8 +93,28 @@
         <% datas.forEach(function(data) { %>
             <article class="post">
                 <img src="<%= data.img %>" alt="<%= data.title %>" title="<%= data.title %>"/>
-                <h1><%= data.title %></h1>
-                <p><%= data.content %></p>
+                <h1>
+                    <% if (lang === "en") { %>
+                        <%= data.titleEN %>
+                    <% } %>
+                    <% if (lang === "fr") { %>
+                        <%= data.titleFR %>
+                    <% } %>
+                    <% if (lang === "es") { %>
+                        <%= data.titleES %>
+                    <% } %>
+                </h1>
+                <p>
+                    <% if (lang === "en") { %>
+                        <%= data.contentEN %>
+                    <% } %>
+                    <% if (lang === "fr") { %>
+                        <%= data.contentFR %>
+                    <% } %>
+                    <% if (lang === "es") { %>
+                        <%= data.contentES %>
+                    <% } %>
+                </p>
                 <span class="more"><a href="blog/<%= data._id %>"><i class="pe-7s-angle-right-circle"></i> <%= translation.blog.readMore %></a></span>
                 <div class="link">
                     <span><i class="pe-7s-user"></i> <%= data.author %></span>

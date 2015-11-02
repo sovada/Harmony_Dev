@@ -56,7 +56,7 @@
             <div class="container">
 
                 <% data.forEach(function (portfolio) { %>
-                    <div class="inline" style="background-image: url('<%= (portfolio.img).split(",")[0] %>'); background-size: 100%;">
+                    <div class="inline" style="background-image: url('<%= (portfolio.img[0]) %>'); background-size: 100%;">
                         <span class="hide">
                             <h3><a href="/portfolio/<%= portfolio._id %>"><%= portfolio.title %></a></h3>
                             <p><%= portfolio.content %></p>

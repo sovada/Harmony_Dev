@@ -17,9 +17,13 @@ var express             = require("express"),
 
 // Blog model
 var blogSchema = new Schema ({
-    title       : String,
-    content     : String,
-    img         : Array,
+    titleEN     : String,
+    titleFR     : String,
+    titleES     : String,
+    contentEN   : String,
+    contentFR   : String,
+    contentES   : String,
+    img         : String,
     date        : String,
     author      : String,
     category    : String
@@ -31,7 +35,7 @@ var blog = mongoose.model("Blog", blogSchema);
 var portfolioSchema = new Schema ({
     title       : String,
     content     : String,
-    img         : String,
+    img         : Array,
     date        : String,
     author      : String,
     category    : String,

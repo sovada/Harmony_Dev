@@ -113,7 +113,7 @@
                 <p><%= translation.portfolioSection.subtitle %></p>
 
                 <% portfolios.forEach(function(data) { %>
-                    <div class= "white-light--work" style="background-image: url('<%= (data.img).split(",")[0] %>'); background-size: 100%;">
+                    <div class= "white-light--work" style="background-image: url('<%= (data.img[0]) %>'); background-size: 100%;">
                         <span class="white-light--work---hide">
                             <h3><a href="/portfolio/<%= data._id %>"><%= data.title %></a></h3>
                             <p><%= data.content %></p>

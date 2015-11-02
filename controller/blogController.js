@@ -15,13 +15,13 @@ module.exports = function (app, translation, blog) {
         query.exec(null, function (err, data) {
             var query = blog.find().distinct("category", function (err, category) {
                 if (currentLanguage === "en") {
-                    res.render("blog/index", {"translation": translation.en, "datas": data, "category" : category});
+                    res.render("blog/index", {"translation": translation.en, "datas": data, "category" : category, "lang": "en"});
                 } else if (currentLanguage === "fr") {
-                    res.render("blog/index", {"translation": translation.fr, "datas": data, "category" : category});
+                    res.render("blog/index", {"translation": translation.fr, "datas": data, "category" : category, "lang": "fr"});
                 } else if (currentLanguage === "es") {
-                    res.render("blog/index", {"translation": translation.es, "datas": data, "category" : category});
+                    res.render("blog/index", {"translation": translation.es, "datas": data, "category" : category, "lang": "es"});
                 } else {
-                    res.render("blog/index", {"translation": translation.en, "datas": data, "category" : category});
+                    res.render("blog/index", {"translation": translation.en, "datas": data, "category" : category, "lang": "en"});
                 }
             });
         });
@@ -36,13 +36,13 @@ module.exports = function (app, translation, blog) {
             var query = blog.find().distinct("category", function (err, category) {
                 var query = blog.find().sort({date: -1}).exec(null, function (err, blog) {
                     if (currentLanguage === "en") {
-                        res.render("blog/single", {"translation": translation.en, "id": blogID, "data": data, "category" : category, "blog": blog});
+                        res.render("blog/single", {"translation": translation.en, "id": blogID, "data": data, "category" : category, "blog": blog, "lang": "en"});
                     } else if (currentLanguage === "fr") {
-                        res.render("blog/single", {"translation": translation.fr, "id": blogID, "data": data, "category" : category, "blog": blog});
+                        res.render("blog/single", {"translation": translation.fr, "id": blogID, "data": data, "category" : category, "blog": blog, "lang": "fr"});
                     } else if (currentLanguage === "es") {
-                        res.render("blog/single", {"translation": translation.es, "id": blogID, "data": data, "category" : category, "blog": blog});
+                        res.render("blog/single", {"translation": translation.es, "id": blogID, "data": data, "category" : category, "blog": blog, "lang": "es"});
                     } else {
-                        res.render("blog/single", {"translation": translation.en, "id": blogID, "data": data, "category" : category, "blog": blog});
+                        res.render("blog/single", {"translation": translation.en, "id": blogID, "data": data, "category" : category, "blog": blog, "lang": "en"});
                     }
                 });
             });
