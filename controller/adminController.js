@@ -78,20 +78,7 @@ module.exports = function (app, admin, blog, portfolio, subscribe) {
         req.cookies.admin ? res.render("admin/blog/add") : res.status(404).send("Sorry you can't go here!");
     });
 
-    app.use(multer({ dest: './assets/uploads',
-        rename: function (fieldname, filename) {
-            return filename+"_"+Date.now();
-            console.log(filename);
-        },
-        onFileUploadStart: function (file) {
-            console.log(file.originalname + ' is starting ...')
-        },
-        onFileUploadComplete: function (file) {
-            console.log(file.fieldname + ' uploaded to  ' + file.path)
-            done=true;
-        }
-    }).single("img"));
-
+    app.use(multer({ dest: './assets/uploads'}).single("img"));
 
     app.post("/hd-admin/blog/added",  function (req, res) {
 
@@ -104,7 +91,7 @@ module.exports = function (app, admin, blog, portfolio, subscribe) {
             contentFR = req.body.contentFR,
             contentES = req.body.contentES,
 
-            img       = "uploads/" + req.file.originalname,
+            img       = "uploads/" + req.body.img,
             date      = moment().format("DD/MM/YYYY"),
             author    = "Harmony_dev",
             category  = req.body.category,
@@ -133,3 +120,4 @@ module.exports = function (app, admin, blog, portfolio, subscribe) {
     });
 
 };
+// Pour ajouter des image, il faut rajouter l'image dans le dossier assets/uploads et push heroku
