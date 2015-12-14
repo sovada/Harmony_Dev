@@ -113,6 +113,17 @@ header nav ul li ul li a {color: white!important;}
 /* ---------------------- End Blog ----------------------- */
 
 
+/* ------------------------ About ------------------------- */
+.about-me {margin-top: 5%; margin-bottom: 5%;}
+.about-me .container h1 {color: #333333!important; font-family: "Montserrat", "sans-serif"; font-weight: bold; font-size: 18px!important; text-transform: uppercase;}
+.about-me .container p {color:#b2b2b2!important;}
+.about-me .container .aboutme {min-width: 25%;}
+.about-me .container ul li {margin-top: 1%; margin-bottom: 1%; display: block;border: solid 1px silver; margin-left: 60%; background-color: #3c3c3c; color:white!important; padding: 0.5%;}
+.about-me .container ul li {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+.skills {background-color: #1d1d1d; margin:0!important; padding-top: 5%; padding-bottom: 5%; color: white!important;}
+/* ---------------------- End about ----------------------- */
+
+
 /* ------------------------ Admin ------------------------- */
 .admin-article { padding-top: 2.5%; padding-bottom: 2.5%;display: block;}
 .admin-article form input {display: block; width: 50%; margin-left: 25%; font-size: 20px; font-family: "Montserrat", "sans-serif"; color: #333333;}

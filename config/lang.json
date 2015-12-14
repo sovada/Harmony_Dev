@@ -98,6 +98,14 @@
           "readMore": "Lire la suite"
       },
 
+      "aboutme": {
+          "aboutme": "à propos de moi",
+          "presentation": "Je suis Jérémy, 22ans, Passionné d'informatique depuis tout petit, j'ai suivi une formation de web-developpeur et me tiens désormais à votre service",
+          "client": "Client satisfait",
+          "skills": "Compétences acquise",
+          "title": "A propos"
+      },
+
       "devis": "Je veux un site",
       "features": "Caractéristiques",
       "submit": "Envoyer",
@@ -199,6 +207,14 @@
           "category": "Category",
           "tag": "Popular tag",
           "readMore": "Read more"
+      },
+
+      "aboutme":{
+          "aboutme": "A litle bit about me",
+          "presentation": "Hey, I'm Jérémy I'm22, I love computer sciences since I was a kid, I've done some course to be a web-developer and now I'm here for you.",
+          "client": "Satisfied client",
+          "skills": "I have skills to show",
+          "title": "about me"
       },
 
       "devis": "I'd like a website",
@@ -303,6 +319,14 @@
           "category": "Categoría",
           "tag": "Tag populares",
           "readMore": "Leer mas"
+      },
+
+      "aboutme": {
+          "aboutme": "Sobre mi",
+          "presentation": "Holà soy Jérémy, tengo 22años, Me encanta la informática desde que era un niño, ahora estoy aqui pa darte la oportunidad de hacer vuestra pagina web",
+          "client": "Client satisfait",
+          "skills": "Lo que puedo hacer",
+          "title": "Sobre mi"
       },
 
       "devis": "Quiero una pagina web",

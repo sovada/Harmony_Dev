@@ -37,4 +37,18 @@ module.exports = function (app, translation, blog, portfolio, subscribe) {
             res.redirect('back');
         }
     });
+
+    app.get("/about-me", function(req, res) {
+        currentLanguage = req.headers["accept-language"][0] + req.headers["accept-language"][1];
+
+        if (currentLanguage === "en") {
+            res.render("about-me", {"translation": translation.en});
+        } else if (currentLanguage === "fr") {
+            res.render("about-me", {"translation": translation.fr});
+        } else if (currentLanguage === "es") {
+            res.render("about-me", {"translation": translation.es});
+        } else {
+            res.render("about-me", {"translation": translation.en});
+        }
+    });
 };
