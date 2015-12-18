@@ -9,6 +9,7 @@ var express             = require("express"),
     deviController      = require("./controller/deviController"),
     indexController     = require("./controller/indexController"),
     adminController     = require("./controller/adminController"),
+    contactController   = require("./controller/contactController"),
     port                = process.env.PORT || 9000,
     env                 = "localhost://",
     translationFile     = JSON.parse(fs.readFileSync(__dirname + "/config/lang.json")),
@@ -63,6 +64,15 @@ var adminSchema = new Schema ({
 var admin = mongoose.model("Admin", adminSchema);
 // End admin model
 
+// contact model
+var contactSchema = new Schema ({
+    name     : String,
+    email    : String,
+    message  : String
+});
+var contact = mongoose.model("Contact", contactSchema);
+// End contact model
+
 // Connexion à la base de donnée
 mongoose.connect("mongodb://root:PGGSfAUH1325@ds039504.mongolab.com:39504/harmony_dev");
 
@@ -81,6 +91,7 @@ deviController(app, translation, mongoose);
 portfolioController(app, translation, portfolio);
 blogController(app, translation, blog);
 adminController(app, admin, blog, portfolio, subscribe);
+contactController(app, translation, contact);
 
 app.listen(port);
 console.log(`Server's running at ${env}${port}`);

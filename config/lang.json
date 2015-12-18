@@ -106,6 +106,18 @@
           "title": "A propos"
       },
 
+      "contact": {
+          "contact": "Nous contacter",
+          "name": "Nom (obligatoire)",
+          "email": "E-mail (obligatoire)",
+          "message": "Message (obligatoire)",
+          "alertname": "*Nom correct obligatoire",
+          "alertemail": "*E-mail correct obligatoire",
+          "alertmessage": "*Message correct obligatoire",
+          "verify": "Vérifier",
+          "success": "Message envoyé, merci!"
+      },
+
       "devis": "Je veux un site",
       "features": "Caractéristiques",
       "submit": "Envoyer",
@@ -215,6 +227,18 @@
           "client": "Satisfied client",
           "skills": "I have skills to show",
           "title": "about me"
+      },
+
+      "contact": {
+          "contact": "Contact us",
+          "name": "Name (required)",
+          "email": "E-mail (required)",
+          "message": "Message (required)",
+          "alertname": "*Correct name required",
+          "alertemail": "*Correct e-mail required",
+          "alertmessage": "*Correct message required",
+          "verify": "Check",
+          "success": "Success, Thank's!"
       },
 
       "devis": "I'd like a website",
@@ -327,6 +351,18 @@
           "client": "Client satisfait",
           "skills": "Lo que puedo hacer",
           "title": "Sobre mi"
+      },
+
+      "contact": {
+          "contact": "Contactar",
+          "name": "Nombre (necesario)",
+          "email": "E-mail (necesario)",
+          "message": "Mensaje (necesario)",
+          "alertname": "*Nombre correcto requiere",
+          "alertemail": "*correo electrónico necesario",
+          "alertmessage": "*Requiere mensaje correcto",
+          "verify": "Comprobar",
+          "success": "Gracias !"
       },
 
       "devis": "Quiero una pagina web",

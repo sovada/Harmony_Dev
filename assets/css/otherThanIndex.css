@@ -19,6 +19,7 @@ html {background: white;}
 .block {display: block;}
 .inline {display:inline-block;}
 button:hover {cursor: pointer;}
+.google-map iframe {width: 100%; margin-top: 0%;}
 /* -------------------------- End Container ----------------------*/
 
 
@@ -122,6 +123,23 @@ header nav ul li ul li a {color: white!important;}
 .about-me .container ul li {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
 .skills {background-color: #1d1d1d; margin:0!important; padding-top: 5%; padding-bottom: 5%; color: white!important;}
 /* ---------------------- End about ----------------------- */
+
+
+/* ------------------------ About ------------------------- */
+.contact h1, .contact h3 {color:#333333!important;}
+.contact .container form input[type=text] {width: 48%; padding: 0.5%; font-size: 15px; margin-bottom: 1%;}
+.contact .container form input[type=email] {width: 48%; padding: 0.5%; font-size: 15px; margin-bottom: 1%;}
+.contact .container form textarea {width: 97.8%; min-height: 150px; padding: 0.5%; margin-bottom: 1%;font-size: 15px;border-color: silver;}
+.contact .container form input[type=button] {-webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.contact .container form input[type=button] {display: block;width: 99%; padding: 1%!important; font-size: 15px!important; margin-bottom: 1%; min-height: 25px; background-color: white;}
+.contact .container form input[type=button] {border: solid 1px silver;}
+.contact .container form input[type=submit] {-webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.contact .container form input[type=submit] {display: block;width: 99%; padding: 1%!important; font-size: 15px!important; margin-bottom: 1%; min-height: 25px; background-color: white;}
+.contact .container form input[type=submit] {border: solid 1px silver;}
+.contact .container form .alert-name p {color:red!important;}
+.contact .container form .alert-email p {color:red!important;}
+.contact .container form .alert-message p {color:red!important;}
+/* ---------------------- End About ----------------------- */
 
 
 /* ------------------------ Admin ------------------------- */
