@@ -34,13 +34,18 @@ var blog = mongoose.model("Blog", blogSchema);
 
 // Portfolio model
 var portfolioSchema = new Schema ({
-    title       : String,
-    content     : String,
-    img         : Array,
-    date        : String,
-    author      : String,
-    category    : String,
-    url         : String
+    titleEN       : String,
+    titleFR       : String,
+    titleES       : String,
+    content       : String,
+    contentEN     : String,
+    contentFR     : String,
+    contentES     : String,
+    img           : Array,
+    date          : String,
+    author        : String,
+    category      : String,
+    url           : String
 });
 var portfolio = mongoose.model("Portfolio", portfolioSchema);
 // end Portfolio model

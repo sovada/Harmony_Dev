@@ -54,12 +54,31 @@
 
         <article class="portfolio">
             <div class="container">
-
                 <% data.forEach(function (portfolio) { %>
                     <div class="inline" style="background-image: url('<%= (portfolio.img[0]) %>'); background-size: 100%;">
                         <span class="hide">
-                            <h3><a href="/portfolio/<%= portfolio._id %>"><%= portfolio.title %></a></h3>
-                            <p><%= portfolio.content %></p>
+                            <h3><a href="/portfolio/<%= portfolio._id %>">
+                                <% if (lang === "en") { %>
+                                    <%= portfolio.titleEN %>
+                                <% } %>
+                                <% if (lang === "fr") { %>
+                                    <%= portfolio.titleFR %>
+                                <% } %>
+                                <% if (lang === "es") { %>
+                                    <%= portfolio.titleES %>
+                                <% } %>
+                            </a></h3>
+                            <p>
+                                <% if (lang === "en") { %>
+                                    <%= portfolio.contentEN %>
+                                <% } %>
+                                <% if (lang === "fr") { %>
+                                    <%= portfolio.contentFR %>
+                                <% } %>
+                                <% if (lang === "es") { %>
+                                    <%= portfolio.contentES %>
+                                <% } %>
+                            </p>
                         </span>
                     </div>
                 <% }); %>

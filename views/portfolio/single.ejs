@@ -63,8 +63,28 @@
                     </ul>
                 </div>
                 <div class="portfolio-single--description float-left">
-                    <h4><%= data.title %></h4>
-                    <p><%= data.content %></p>
+                    <h4>
+                        <% if (lang === "en") { %>
+                            <%= data.titleEN %>
+                        <% } %>
+                        <% if (lang === "fr") { %>
+                            <%= data.titleFR %>
+                        <% } %>
+                        <% if (lang === "es") { %>
+                            <%= data.titleES %>
+                        <% } %>
+                    </h4>
+                    <p>
+                        <% if (lang === "en") { %>
+                        <%= data.contentEN %>
+                        <% } %>
+                        <% if (lang === "fr") { %>
+                            <%= data.contentFR %>
+                        <% } %>
+                        <% if (lang === "es") { %>
+                            <%= data.contentES %>
+                        <% } %>
+                    </p>
                 </div>
 
                 <div class="portfolio-single--view">

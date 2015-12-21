@@ -12,13 +12,13 @@ module.exports = function (app, translation, portfolio) {
         // translation.en = le fichier lang dans config.
         portfolio.find(function(err, data) {
             if (currentLanguage === "en") {
-                res.render("portfolio/index", {"translation": translation.en, "data": data});
+                res.render("portfolio/index", {"translation": translation.en, "data": data, "lang": "en"});
             } else if (currentLanguage === "fr") {
-                res.render("portfolio/index", {"translation": translation.fr, "data": data});
+                res.render("portfolio/index", {"translation": translation.fr, "data": data, "lang": "fr"});
             } else if (currentLanguage === "es") {
-                res.render("portfolio/index", {"translation": translation.es, "data": data});
+                res.render("portfolio/index", {"translation": translation.es, "data": data, "lang": "es"});
             } else {
-                res.render("portfolio/index", {"translation": translation.en, "data": data});
+                res.render("portfolio/index", {"translation": translation.en, "data": data, "lang": "en"});
             }
         });
     });
@@ -30,13 +30,13 @@ module.exports = function (app, translation, portfolio) {
         portfolioID = req.params.portfolioID;
         portfolio.findOne({"_id": portfolioID}, function (err, data) {
             if (currentLanguage === "en") {
-                res.render("portfolio/single", {"translation": translation.en, "id": portfolioID, "data": data});
+                res.render("portfolio/single", {"translation": translation.en, "id": portfolioID, "data": data, "lang": "en"});
             } else if (currentLanguage === "fr") {
-                res.render("portfolio/single", {"translation": translation.fr, "id": portfolioID, "data": data});
+                res.render("portfolio/single", {"translation": translation.fr, "id": portfolioID, "data": data, "lang": "fr"});
             } else if (currentLanguage === "es") {
-                res.render("portfolio/single", {"translation": translation.es, "id": portfolioID, "data": data});
+                res.render("portfolio/single", {"translation": translation.es, "id": portfolioID, "data": data, "lang": "es"});
             } else {
-                res.render("portfolio/single", {"translation": translation.en, "id": portfolioID, "data": data});
+                res.render("portfolio/single", {"translation": translation.en, "id": portfolioID, "data": data, "lang": "en"});
             }
         });
     });

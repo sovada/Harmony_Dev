@@ -59,7 +59,7 @@ module.exports = function (app, admin, blog, portfolio, subscribe, contact) {
     app.get("/hd-admin/portfolio", function (req, res) {
         if (req.cookies.admin) {
             portfolio.find(function (err, data) {
-                res.render("admin/portfolio", {"data": data});
+                res.render("admin/portfolio/index", {"data": data});
             });
         } else {
             res.redirect("/");
@@ -179,6 +179,42 @@ module.exports = function (app, admin, blog, portfolio, subscribe, contact) {
         } else {
             res.status(404).send("Sorry you can't go here!");
         }
+    });
+
+    app.get("/hd-admin/portfolio/add", function (req, res) {
+        req.cookies.admin ? res.render("admin/portfolio/add") : res.status(404).send("Sorry you can't go here!");
+    });
+
+    app.post("/hd-admin/portfolio/added", function (req, res) {
+        var titleEN   = req.body.titleEN,
+            titleFR   = req.body.titleFR,
+            titleES   = req.body.titleES,
+
+            contentEN = req.body.contentEN,
+            contentFR = req.body.contentFR,
+            contentES = req.body.contentES,
+
+            img      = ["uploads/" + req.body.img1, "uploads/" + req.body.img2, "uploads/" + req.body.img3],
+            date      = moment().format("DD/MM/YYYY"),
+            author    = "Harmony_dev",
+            category  = req.body.category,
+            url       = req.body.URL;
+
+        var add = new portfolio ({
+            titleEN     : titleEN,
+            titleFR     : titleFR,
+            titleES     : titleES,
+            contentEN   : contentEN,
+            contentFR   : contentFR,
+            contentES   : contentES,
+            img         : img,
+            date        : date,
+            author      : author,
+            category    : category,
+            url         : url
+        }).save(function (err, data) {
+            !err ? res.redirect("/hd-admin/portfolio") : console.log("err");
+        });
     });
 
     app.get("/hd-admin/logout", function (req, res) {

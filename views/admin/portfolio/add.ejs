@@ -52,14 +52,14 @@
 
             <div class="pricing-title">
                 <h2>Administration</h2>
-                <span class="header--ariane"><a href="/">Home</a> > <a href="/hd-admin">Administration</a> > Add to Blog</span>
+                <span class="header--ariane"><a href="/">Home</a> > <a href="/hd-admin">Administration</a> > Add to Portfolio</span>
             </div>
         </header>
 
         <article>
             <h2 style="color:black!important;">Add a post</h2>
             <div class="container">
-                <form method="post" action="/hd-admin/blog/added" class="form-to-add-post" enctype="multipart/form-data">
+                <form method="post" action="/hd-admin/portfolio/added" class="form-to-add-post" enctype="multipart/form-data">
                     <input type="text" name="titleEN" placeholder="title english"/>
                     <input type="text" name="titleFR"  placeholder="title french"/>
                     <input type="text" name="titleES"  placeholder="title spanish"/>
@@ -68,8 +68,11 @@
                     <textarea name="contentFR">Content french</textarea>
                     <textarea name="contentES">Content spanish</textarea>
 
-                    <input type="text" name="img" placeholder="file name + extension"/>
+                    <input type="text" name="img1" placeholder="file name + extension"/>
+                    <input type="text" name="img2" placeholder="file name + extension"/>
+                    <input type="text" name="img3" placeholder="file name + extension"/>
                     <input type="text" name="category"  placeholder="category"/>
+                    <input type="text" name="URL"  placeholder="url"/>
 
                     <input type="submit" />
                 </form>

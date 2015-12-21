@@ -69,7 +69,7 @@
                     </tr>
                     <% data.forEach(function (portfolio) { %>
                         <tr>
-                            <td><%= portfolio.title %></td>
+                            <td><%= portfolio.titleEN %></td>
                             <td><%= portfolio.author %></td>
                             <td><%= portfolio.date %></td>
                             <td><%= portfolio.category %></td>
@@ -78,7 +78,7 @@
                         </tr>
                     <% }); %>
                 </table>
-                <button type="button" value="add one" style="padding: 1%; background-color: white; border: solid 1px silver; margin-bottom: 1%;">+</button>
+                <button type="button" value="add one" style="padding: 1%; background-color: white; border: solid 1px silver; margin-bottom: 1%;" onclick="window.location.href='/hd-admin/portfolio/add'">+</button>
             </div>
         </article>
 
