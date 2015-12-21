@@ -52,63 +52,31 @@
 
             <div class="pricing-title">
                 <h2>Administration</h2>
-                <span class="header--ariane"><a href="/">Home</a> > <a href="/hd-admin">Administration</a> > Portfolio</span>
+                <span class="header--ariane"><a href="/">Home</a> > <a href="/hd-admin">Administration</a> > Update a post (portfolio)</span>
             </div>
         </header>
 
         <article>
+            <h2 style="color:black!important;">Update a post (portfolio)</h2>
             <div class="container">
-                <table class="blog-table">
-                    <tr>
-                        <th>Title:</th>
-                        <th>Author:</th>
-                        <th>Date:</th>
-                        <th>Category:</th>
-                        <th>Update:</th>
-                        <th>Delete:</th>
-                    </tr>
-                    <% data.forEach(function (portfolio) { %>
-                        <tr>
-                            <td><%= portfolio.titleEN %></td>
-                            <td><%= portfolio.author %></td>
-                            <td><%= portfolio.date %></td>
-                            <td><%= portfolio.category %></td>
-                            <td><a href="/hd-admin/portfolio/update/<%= portfolio._id %>"><i class="fa fa-pencil"></i></a></td>
-                            <td><a href="#" onclick="ajaxPortfolioDelete('<%= portfolio._id %>')"><i class="fa fa-ban"></i></a></td>
-                        </tr>
-                    <% }); %>
-                </table>
+                <form method="post" action="/hd-admin/portfolio/updated/<%= data._id %>" class="form-to-add-post" enctype="multipart/form-data">
+                    <input type="text" name="titleEN" placeholder="title english" value="<%= data.titleEN %>"/>
+                    <input type="text" name="titleFR"  placeholder="title french" value="<%= data.titleFR %>"/>
+                    <input type="text" name="titleES"  placeholder="title spanish" value="<%= data.titleES %>"/>
 
-                <div class="modal margin-right">
-                    <h4>!Caution!</h4>
-                    <p>!Would do you really like to delete this post?</p>
-                    <button id="confirm">Yes I do</button>
-                </div>
+                    <textarea name="contentEN"><%= data.contentEN %></textarea>
+                    <textarea name="contentFR"><%= data.contentFR %></textarea>
+                    <textarea name="contentES"><%= data.contentES %></textarea>
 
-                <script>
-                    $(".modal").hide();
-                    var ajaxPortfolioDelete = function (id) {
-                        document.getElementById("confirm").addEventListener("click", function () {
-                            $.ajax({
-                                type    : "POST",
-                                url     : "/hd-admin/portfolio/delete",
-                                data    : {"portfolioID" : id}
-                            });
-                            hideModal.apply();
-                            var removing = "#" + id;
-                            $(removing).fadeOut(500);
-                        });
-                        showModal.apply();
-                    };
-                    var showModal = function () {
-                        $(".modal").fadeIn(1000);
-                    };
-                    var hideModal = function () {
-                        $(".modal").fadeOut(300);
-                    }
-                </script>
+                    <input type="text" name="img1" placeholder="file name + extension" value="<%= data.img[0] %>"/>
+                    <input type="text" name="img2" placeholder="file name + extension" value="<%= data.img[1] %>"/>
+                    <input type="text" name="img3" placeholder="file name + extension" value="<%= data.img[2] %>"/>
 
-                <button type="button" value="add one" style="padding: 1%; background-color: white; border: solid 1px silver; margin-bottom: 1%;" onclick="window.location.href='/hd-admin/portfolio/add'">+</button>
+                    <input type="text" name="category"  placeholder="category" value="<%= data.category %>"/>
+                    <input type="text" name="url"  placeholder="url" value="<%= data.url %>"/>
+
+                    <input type="submit" />
+                </form>
             </div>
         </article>
 

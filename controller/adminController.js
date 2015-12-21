@@ -217,6 +217,73 @@ module.exports = function (app, admin, blog, portfolio, subscribe, contact) {
         });
     });
 
+    app.get("/hd-admin/portfolio/update/:portfolioID", function (req, res) {
+        if (req.cookies.admin) {
+            portfolioID = req.params.portfolioID;
+
+            portfolio.findOne({"_id": portfolioID}, function (err, data) {
+                res.render("admin/portfolio/update", {"data": data});
+            });
+        }
+    } );
+
+    app.post("/hd-admin/portfolio/updated/:portfolioID", function (req, res) {
+        if (req.cookies.admin) {
+            portfolioID    = req.params.portfolioID;
+
+            var titleEN    = req.body.titleEN,
+                titleFR    = req.body.titleFR,
+                titleES    = req.body.titleES,
+
+                contentEN  = req.body.contentEN,
+                contentFR  = req.body.contentFR,
+                contentES  = req.body.contentES,
+
+                img1       = req.body.img1,
+                img2       = req.body.img2,
+                img3       = req.body.img3,
+                date       = moment().format("DD/MM/YYYY"),
+                author     = "Harmony_dev",
+                category   = req.body.category,
+                url        = req.body.url;
+
+                portfolio.findOne({"_id": portfolioID}, function (err, data) {
+                    data.titleEN   = titleEN;
+                    data.titleFR   = titleFR;
+                    data.titleES   = titleES;
+
+                    data.contentEN = contentEN;
+                    data.contentFR = contentFR;
+                    data.contentES = contentES;
+
+                    data.img[0]    ="/uploads/" + img1;
+                    data.img[1]    ="/uploads/" + img2;
+                    data.img[2]    ="/uploads/" + img3;
+
+                    data.date      = date;
+                    data.author    = author;
+                    data.category  = category;
+                    data.url       = url;
+
+                    data.save();
+                });
+
+                portfolio.find(function (err, data) {
+                    res.render("admin/portfolio/index", {"data": data});
+                }).sort({date: -1});
+        } else {
+            res.redirect("/");
+        }
+    });
+
+    app.post("/hd-admin/portfolio/delete", function (req, res) {
+        if (req.cookies.admin) {
+            portfolio.remove({"_id": req.body.portfolioID}, function (err, data) {});
+        } else {
+            res.status(404).send("Sorry you can't go here!");
+        }
+    } );
+
     app.get("/hd-admin/logout", function (req, res) {
         // supprime le cookie admin
         res.clearCookie("admin", {path: "/"});
