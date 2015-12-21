@@ -131,6 +131,56 @@ module.exports = function (app, admin, blog, portfolio, subscribe, contact) {
         }
     });
 
+    app.get("/hd-admin/blog/update/:blogID", function (req, res) {
+        blogID = req.params.blogID;
+
+        blog.findOne({"_id": blogID}, function (err, data) {
+            res.render("admin/blog/update", {"data": data});
+        });
+    });
+
+    app.post("/hd-admin/blog/updated/:blogID", function (req, res) {
+        if (req.cookies.admin) {
+            blogID = req.params.blogID;
+
+            var titleEN   = req.body.titleEN,
+                titleFR   = req.body.titleFR,
+                titleES   = req.body.titleES,
+
+                contentEN = req.body.contentEN,
+                contentFR = req.body.contentFR,
+                contentES = req.body.contentES,
+
+                img       = req.body.img,
+                date      = moment().format("DD/MM/YYYY"),
+                author    = "Harmony_dev",
+                category  = req.body.category;
+
+                blog.findOne({"_id": blogID}, function (err, data) {
+                    data.titleEN   = titleEN;
+                    data.titleFR   = titleFR;
+                    data.titleES   = titleES;
+
+                    data.contentEN = contentEN;
+                    data.contentFR = contentFR;
+                    data.contentES = contentES;
+
+                    data.img       ="/uploads/" + img;
+                    data.date      = date;
+                    data.author    = author;
+                    data.category  = category;
+
+                    data.save();
+                });
+
+                blog.find(function (err, data) {
+                    res.render("admin/blog/index", {"data": data});
+                }).sort({date: -1});
+        } else {
+            res.status(404).send("Sorry you can't go here!");
+        }
+    });
+
     app.get("/hd-admin/logout", function (req, res) {
         // supprime le cookie admin
         res.clearCookie("admin", {path: "/"});
