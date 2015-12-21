@@ -52,28 +52,56 @@
 
             <div class="pricing-title">
                 <h2>Administration</h2>
-                <span class="header--ariane"><a href="/">Home</a> > <a href="/hd-admin">Administration</a> > Add to Blog</span>
+                <span class="header--ariane"><a href="/">Home</a> > <a href="/hd-admin">Administration</a> > Messages</span>
             </div>
         </header>
 
         <article>
-            <h2 style="color:black!important;">Add a post</h2>
             <div class="container">
-                <form method="post" action="/hd-admin/blog/added" class="form-to-add-post" enctype="multipart/form-data">
-                    <input type="text" name="titleEN" placeholder="title english"/>
-                    <input type="text" name="titleFR"  placeholder="title french"/>
-                    <input type="text" name="titleES"  placeholder="title spanish"/>
+                <table class="blog-table">
+                    <tr>
+                        <th>Name:</th>
+                        <th>Email:</th>
+                        <th>Message:</th>
+                    </tr>
+                    <% data.forEach(function (contact) { %>
+                        <tr>
+                            <td><%= contact.name %></td>
+                            <td><%= contact.email %></td>
+                            <td><%= contact.message %></td>
+                            <td><a href="#" onclick="ajaxContactDelete('<%= contact._id %>')"><i class="fa fa-ban"></i></a></td>
+                        </tr>
+                    <% }); %>
+                </table>
 
-                    <textarea name="contentEN">Content english</textarea>
-                    <textarea name="contentFR">Content french</textarea>
-                    <textarea name="contentES">Content spanish</textarea>
+                <div class="modal margin-right">
+                    <h4>!Caution!</h4>
+                    <p>!Would do you really like to delete this post?</p>
+                    <button id="confirm">Yes I do</button>
+                </div>
 
-                    <input type="text" name="img" placeholder="file name + extension"/>
-                    <input type="text" name="category"  placeholder="category"/>
-                    <input type="text" name="URL"  placeholder="url"/>
-
-                    <input type="submit" />
-                </form>
+                <script>
+                    $(".modal").hide();
+                    var ajaxContactDelete = function (id) {
+                        document.getElementById("confirm").addEventListener("click", function () {
+                            $.ajax({
+                                type    : "POST",
+                                url     : "/hd-admin/contact/delete",
+                                data    : {"contactID" : id}
+                            });
+                            hideModal.apply();
+                            var removing = "#" + id;
+                            $(removing).fadeOut(500);
+                        });
+                        showModal.apply();
+                    };
+                    var showModal = function () {
+                        $(".modal").fadeIn(1000);
+                    };
+                    var hideModal = function () {
+                        $(".modal").fadeOut(300);
+                    }
+                </script>
             </div>
         </article>
 

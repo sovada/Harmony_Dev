@@ -1,4 +1,4 @@
-module.exports = function (app, admin, blog, portfolio, subscribe) {
+module.exports = function (app, admin, blog, portfolio, subscribe, contact) {
     var moment    = require("moment"),
         multer    = require("multer");
 
@@ -111,6 +111,24 @@ module.exports = function (app, admin, blog, portfolio, subscribe) {
         }).save(function (err, data) {
             !err ? res.redirect("/hd-admin/blog") : console.log("err");
         });
+    });
+
+    app.get("/hd-admin/contact", function (req, res) {
+        if (req.cookies.admin) {
+            contact.find(function (err, data) {
+                res.render("admin/contact/index", {"data": data});
+            }).sort({date: -1});
+        } else {
+            res.redirect("/");
+        }
+    });
+
+    app.post("/hd-admin/contact/delete", function (req, res, next) {
+        if (req.cookies.admin) {
+            contact.remove({"_id": req.body.contactID}, function (err, data) {});
+        } else {
+            res.status(404).send("Sorry you can't go here!");
+        }
     });
 
     app.get("/hd-admin/logout", function (req, res) {

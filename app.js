@@ -90,7 +90,7 @@ indexController(app, translation, blog, portfolio, subscribe);
 deviController(app, translation, mongoose);
 portfolioController(app, translation, portfolio);
 blogController(app, translation, blog);
-adminController(app, admin, blog, portfolio, subscribe);
+adminController(app, admin, blog, portfolio, subscribe, contact);
 contactController(app, translation, contact);
 
 app.listen(port);
