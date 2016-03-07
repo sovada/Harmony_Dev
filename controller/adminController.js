@@ -91,7 +91,7 @@ module.exports = function (app, admin, blog, portfolio, subscribe, contact) {
             contentFR = req.body.contentFR,
             contentES = req.body.contentES,
 
-            img       = "uploads/" + req.body.img,
+            img       = "/uploads/" + req.body.img,
             date      = moment().format("DD/MM/YYYY"),
             author    = "Harmony_dev",
             category  = req.body.category,
